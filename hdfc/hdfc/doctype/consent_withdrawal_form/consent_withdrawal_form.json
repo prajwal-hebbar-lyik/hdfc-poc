@@ -6,50 +6,46 @@
  "engine": "InnoDB",
  "field_order": [
   "requesters_details_as_per_bank_records_section",
-  "full_name",
+  "customer_name",
+  "customer_id",
   "mobile_number",
   "request_details_section",
   "deposit",
   "cards",
-  "account",
-  "loan",
+  "accounts",
+  "loans",
   "column_break_rdqx",
-  "investment",
+  "investments",
   "insurance",
   "prepaid_cards",
-  "mercahant_solutions",
+  "marcahant_solutions",
   "column_break_tode",
   "working_capital",
-  "pay_zapp",
+  "payzapp_walet",
   "section_break_qotz",
   "date",
   "identity_proof_document_tab",
   "passport_section",
   "passport_fullname",
-  "dob_passport",
   "column_break_clbl",
   "passport_number",
   "voter_id_section",
   "column_break_uxpi",
-  "name_voter_id",
-  "dob_pan",
+  "voterid_fullname",
   "column_break_pkpp",
-  "voter_id_number",
+  "voterid_number",
   "driving_license_section",
   "column_break_tbeq",
-  "name_dl",
-  "dob_dl",
+  "dl_fullname",
   "column_break_akab",
   "dl_number",
   "aadhaar_section",
-  "name_aadhaar",
-  "dob_aadhaar",
+  "aadhaar_fullname",
   "column_break_ipst",
-  "aadhaar_number",
+  "aadhaar_uid",
   "pan_section",
   "column_break_fxag",
-  "name_pan",
-  "dob_pan_card",
+  "pan_fullname",
   "column_break_plhb",
   "pan_number",
   "other_documents_section",
@@ -57,11 +53,6 @@
   "other_document_number"
  ],
  "fields": [
-  {
-   "fieldname": "full_name",
-   "fieldtype": "Data",
-   "label": "Full Name"
-  },
   {
    "fieldname": "mobile_number",
    "fieldtype": "Phone",
@@ -91,26 +82,8 @@
    "label": "Cards"
   },
   {
-   "default": "0",
-   "fieldname": "account",
-   "fieldtype": "Check",
-   "label": "Accounts"
-  },
-  {
-   "default": "0",
-   "fieldname": "loan",
-   "fieldtype": "Check",
-   "label": "Loans"
-  },
-  {
    "fieldname": "column_break_rdqx",
    "fieldtype": "Column Break"
-  },
-  {
-   "default": "0",
-   "fieldname": "investment",
-   "fieldtype": "Check",
-   "label": "Investments"
   },
   {
    "default": "0",
@@ -125,12 +98,6 @@
    "label": "Prepaid Cards"
   },
   {
-   "default": "0",
-   "fieldname": "mercahant_solutions",
-   "fieldtype": "Check",
-   "label": "Merchant Solutions"
-  },
-  {
    "fieldname": "column_break_tode",
    "fieldtype": "Column Break"
   },
@@ -139,12 +106,6 @@
    "fieldname": "working_capital",
    "fieldtype": "Check",
    "label": "Working Capital"
-  },
-  {
-   "default": "0",
-   "fieldname": "pay_zapp",
-   "fieldtype": "Check",
-   "label": "PayZapp/Wallet"
   },
   {
    "fieldname": "section_break_qotz",
@@ -161,37 +122,12 @@
    "label": "Passport Number"
   },
   {
-   "fieldname": "dob_passport",
-   "fieldtype": "Date",
-   "label": "Date of Birth"
-  },
-  {
    "fieldname": "column_break_uxpi",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "name_voter_id",
-   "fieldtype": "Data",
-   "label": "Name on VoterID"
-  },
-  {
-   "fieldname": "voter_id_number",
-   "fieldtype": "Data",
-   "label": "Voter ID No."
-  },
-  {
-   "fieldname": "dob_pan",
-   "fieldtype": "Date",
-   "label": "Date of Birth"
-  },
-  {
    "fieldname": "column_break_tbeq",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "name_dl",
-   "fieldtype": "Data",
-   "label": "Name on Driving License"
   },
   {
    "fieldname": "dl_number",
@@ -199,18 +135,8 @@
    "label": "Driving License No."
   },
   {
-   "fieldname": "dob_dl",
-   "fieldtype": "Date",
-   "label": "Date of Birth"
-  },
-  {
    "fieldname": "column_break_fxag",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "name_pan",
-   "fieldtype": "Data",
-   "label": "Name on PAN"
   },
   {
    "fieldname": "pan_number",
@@ -255,33 +181,13 @@
    "label": "Aadhaar"
   },
   {
-   "fieldname": "name_aadhaar",
-   "fieldtype": "Data",
-   "label": "Name on Aadhaar"
-  },
-  {
-   "fieldname": "dob_aadhaar",
-   "fieldtype": "Date",
-   "label": "Date of Birth"
-  },
-  {
    "fieldname": "column_break_ipst",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "aadhaar_number",
-   "fieldtype": "Data",
-   "label": "Aadhaar No. (Last 4 digits)"
   },
   {
    "fieldname": "pan_section",
    "fieldtype": "Section Break",
    "label": "PAN"
-  },
-  {
-   "fieldname": "dob_pan_card",
-   "fieldtype": "Date",
-   "label": "Date of Birth"
   },
   {
    "fieldname": "column_break_plhb",
@@ -305,12 +211,82 @@
   {
    "fieldname": "passport_fullname",
    "fieldtype": "Data",
-   "label": "Name as in Passport"
+   "label": "Name on Passport"
+  },
+  {
+   "default": "0",
+   "fieldname": "accounts",
+   "fieldtype": "Check",
+   "label": "Accounts"
+  },
+  {
+   "default": "0",
+   "fieldname": "loans",
+   "fieldtype": "Check",
+   "label": "Loans"
+  },
+  {
+   "default": "0",
+   "fieldname": "investments",
+   "fieldtype": "Check",
+   "label": "Investments"
+  },
+  {
+   "default": "0",
+   "fieldname": "marcahant_solutions",
+   "fieldtype": "Check",
+   "label": "Merchant Solutions"
+  },
+  {
+   "default": "0",
+   "fieldname": "payzapp_walet",
+   "fieldtype": "Check",
+   "label": "PayZapp/Wallet"
+  },
+  {
+   "fieldname": "voterid_fullname",
+   "fieldtype": "Data",
+   "label": "Name on VoterID"
+  },
+  {
+   "fieldname": "voterid_number",
+   "fieldtype": "Data",
+   "label": "Voter ID No."
+  },
+  {
+   "fieldname": "dl_fullname",
+   "fieldtype": "Data",
+   "label": "Name on Driving License"
+  },
+  {
+   "fieldname": "aadhaar_fullname",
+   "fieldtype": "Data",
+   "label": "Name on Aadhaar"
+  },
+  {
+   "fieldname": "aadhaar_uid",
+   "fieldtype": "Data",
+   "label": "Aadhaar No. (Last 4 digits)"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "customer_id",
+   "fieldtype": "Data",
+   "label": "Customer ID"
+  },
+  {
+   "fieldname": "pan_fullname",
+   "fieldtype": "Data",
+   "label": "Name on PAN"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-26 22:44:29.572236",
+ "modified": "2024-01-26 23:43:49.682400",
  "modified_by": "Administrator",
  "module": "Hdfc",
  "name": "Consent Withdrawal Form",
