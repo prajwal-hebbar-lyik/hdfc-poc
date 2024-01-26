@@ -1,0 +1,335 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-25 17:15:56.092970",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "requesters_details_as_per_bank_records_section",
+  "full_name",
+  "mobile_number",
+  "request_details_section",
+  "deposit",
+  "cards",
+  "account",
+  "loan",
+  "column_break_rdqx",
+  "investment",
+  "insurance",
+  "prepaid_cards",
+  "mercahant_solutions",
+  "column_break_tode",
+  "working_capital",
+  "pay_zapp",
+  "section_break_qotz",
+  "date",
+  "identity_proof_document_tab",
+  "passport_section",
+  "name_passport",
+  "dob_passport",
+  "column_break_clbl",
+  "passport_number",
+  "voter_id_section",
+  "column_break_uxpi",
+  "name_voter_id",
+  "dob_pan",
+  "column_break_pkpp",
+  "voter_id_number",
+  "driving_license_section",
+  "column_break_tbeq",
+  "name_dl",
+  "dob_dl",
+  "column_break_akab",
+  "dl_number",
+  "aadhaar_section",
+  "name_aadhaar",
+  "dob_aadhaar",
+  "column_break_ipst",
+  "aadhaar_number",
+  "pan_section",
+  "column_break_fxag",
+  "name_pan",
+  "dob_pan_card",
+  "column_break_plhb",
+  "pan_number",
+  "other_documents_section",
+  "name_other_document",
+  "other_document_number"
+ ],
+ "fields": [
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Phone",
+   "label": "Registered Mobile No."
+  },
+  {
+   "fieldname": "requesters_details_as_per_bank_records_section",
+   "fieldtype": "Section Break",
+   "label": "Requester's Details (as per bank records)"
+  },
+  {
+   "description": "I would like to withdraw consent to process my personal data by HDFC Bank for sending me personalised offers for following products and services:",
+   "fieldname": "request_details_section",
+   "fieldtype": "Section Break",
+   "label": "Request Details"
+  },
+  {
+   "default": "0",
+   "fieldname": "deposit",
+   "fieldtype": "Check",
+   "label": "Deposit"
+  },
+  {
+   "default": "0",
+   "fieldname": "cards",
+   "fieldtype": "Check",
+   "label": "Cards"
+  },
+  {
+   "default": "0",
+   "fieldname": "account",
+   "fieldtype": "Check",
+   "label": "Accounts"
+  },
+  {
+   "default": "0",
+   "fieldname": "loan",
+   "fieldtype": "Check",
+   "label": "Loans"
+  },
+  {
+   "fieldname": "column_break_rdqx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "investment",
+   "fieldtype": "Check",
+   "label": "Investments"
+  },
+  {
+   "default": "0",
+   "fieldname": "insurance",
+   "fieldtype": "Check",
+   "label": "Insurance"
+  },
+  {
+   "default": "0",
+   "fieldname": "prepaid_cards",
+   "fieldtype": "Check",
+   "label": "Prepaid Cards"
+  },
+  {
+   "default": "0",
+   "fieldname": "mercahant_solutions",
+   "fieldtype": "Check",
+   "label": "Merchant Solutions"
+  },
+  {
+   "fieldname": "column_break_tode",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "working_capital",
+   "fieldtype": "Check",
+   "label": "Working Capital"
+  },
+  {
+   "default": "0",
+   "fieldname": "pay_zapp",
+   "fieldtype": "Check",
+   "label": "PayZapp/Wallet"
+  },
+  {
+   "fieldname": "section_break_qotz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "name_passport",
+   "fieldtype": "Data",
+   "label": "Name on Passport"
+  },
+  {
+   "fieldname": "passport_number",
+   "fieldtype": "Data",
+   "label": "Passport No."
+  },
+  {
+   "fieldname": "dob_passport",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "column_break_uxpi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "name_voter_id",
+   "fieldtype": "Data",
+   "label": "Name on VoterID"
+  },
+  {
+   "fieldname": "voter_id_number",
+   "fieldtype": "Data",
+   "label": "Voter ID No."
+  },
+  {
+   "fieldname": "dob_pan",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "column_break_tbeq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "name_dl",
+   "fieldtype": "Data",
+   "label": "Name on Driving License"
+  },
+  {
+   "fieldname": "dl_number",
+   "fieldtype": "Data",
+   "label": "Driving License No."
+  },
+  {
+   "fieldname": "dob_dl",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "column_break_fxag",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "name_pan",
+   "fieldtype": "Data",
+   "label": "Name on PAN"
+  },
+  {
+   "fieldname": "pan_number",
+   "fieldtype": "Data",
+   "label": "PAN No."
+  },
+  {
+   "fieldname": "identity_proof_document_tab",
+   "fieldtype": "Tab Break",
+   "label": "Identity Proof Document"
+  },
+  {
+   "fieldname": "passport_section",
+   "fieldtype": "Section Break",
+   "label": "Passport"
+  },
+  {
+   "fieldname": "column_break_clbl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "voter_id_section",
+   "fieldtype": "Section Break",
+   "label": "Voter ID"
+  },
+  {
+   "fieldname": "column_break_pkpp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "driving_license_section",
+   "fieldtype": "Section Break",
+   "label": "Driving License"
+  },
+  {
+   "fieldname": "column_break_akab",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "aadhaar_section",
+   "fieldtype": "Section Break",
+   "label": "Aadhaar"
+  },
+  {
+   "fieldname": "name_aadhaar",
+   "fieldtype": "Data",
+   "label": "Name on Aadhaar"
+  },
+  {
+   "fieldname": "dob_aadhaar",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "column_break_ipst",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "aadhaar_number",
+   "fieldtype": "Data",
+   "label": "Aadhaar No. (Last 4 digits)"
+  },
+  {
+   "fieldname": "pan_section",
+   "fieldtype": "Section Break",
+   "label": "PAN"
+  },
+  {
+   "fieldname": "dob_pan_card",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "column_break_plhb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "other_documents_section",
+   "fieldtype": "Section Break",
+   "label": "Other Documents"
+  },
+  {
+   "fieldname": "name_other_document",
+   "fieldtype": "Data",
+   "label": "Name of Document"
+  },
+  {
+   "fieldname": "other_document_number",
+   "fieldtype": "Data",
+   "label": "Document No."
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-25 19:14:56.677421",
+ "modified_by": "Administrator",
+ "module": "Hdfc",
+ "name": "Consent Withdrawal Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
