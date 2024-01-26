@@ -1,0 +1,209 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-27 00:08:21.480420",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "requesters_details_as_per_bank_records_section",
+  "customer_name",
+  "customer_id",
+  "mobile_number",
+  "request_for_statement_section",
+  "statement_from",
+  "statement_to",
+  "column_break_sxwl",
+  "reason_for_request",
+  "request_for_interest_certificate_section",
+  "int_cert_from",
+  "int_cert_to",
+  "request_for_balance_confirmation_section",
+  "balance_confirmation",
+  "request_for_fd_balances_section",
+  "fd_balances",
+  "fd_confirmation_section",
+  "fd_no",
+  "request_for_form_16a_section",
+  "form16a_year",
+  "request_for_status_of_cheque_section",
+  "cheque_no",
+  "dispatch_information_section",
+  "dispatch_mode",
+  "other_person_mobile_number",
+  "column_break_izxi",
+  "mailing_address"
+ ],
+ "fields": [
+  {
+   "fieldname": "requesters_details_as_per_bank_records_section",
+   "fieldtype": "Section Break",
+   "label": "Requester's Details (as per bank records)"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "customer_id",
+   "fieldtype": "Data",
+   "label": "Customer ID"
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Phone",
+   "label": "Registered Mobile No."
+  },
+  {
+   "description": "I request statement for the period mentioned below. I have also mentioned the reason for this request.",
+   "fieldname": "request_for_statement_section",
+   "fieldtype": "Section Break",
+   "label": "Request for Statement"
+  },
+  {
+   "fieldname": "statement_from",
+   "fieldtype": "Date",
+   "label": "Statement Period From:"
+  },
+  {
+   "fieldname": "statement_to",
+   "fieldtype": "Date",
+   "label": "Statement Period To:"
+  },
+  {
+   "fieldname": "column_break_sxwl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reason_for_request",
+   "fieldtype": "Data",
+   "label": "Reason for request"
+  },
+  {
+   "description": "Please provide Interest Certificate CASA/FD Account number given above for the years mentioned below.\n",
+   "fieldname": "request_for_interest_certificate_section",
+   "fieldtype": "Section Break",
+   "label": "Request for Interest Certificate"
+  },
+  {
+   "fieldname": "int_cert_from",
+   "fieldtype": "Date",
+   "label": "Year From:"
+  },
+  {
+   "fieldname": "int_cert_to",
+   "fieldtype": "Date",
+   "label": "Year To:"
+  },
+  {
+   "description": "Please send me a balance confirmation for the account number mentioned above.",
+   "fieldname": "request_for_balance_confirmation_section",
+   "fieldtype": "Section Break",
+   "label": "Request for Balance Confirmation"
+  },
+  {
+   "fieldname": "balance_confirmation",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Request Account Balance",
+   "options": "Yes\nNo"
+  },
+  {
+   "description": "Please provide me the current FD balance(s) booked under the customer id mentioned above.",
+   "fieldname": "request_for_fd_balances_section",
+   "fieldtype": "Section Break",
+   "label": "Request for FD Balance(s)"
+  },
+  {
+   "fieldname": "fd_balances",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Request FD Balance(s)",
+   "options": "Yes\nNo"
+  },
+  {
+   "description": "Provide the FD confirmation for FD number mentioned below. I have not received this by post till now.\n",
+   "fieldname": "fd_confirmation_section",
+   "fieldtype": "Section Break",
+   "label": "FD Confirmation"
+  },
+  {
+   "fieldname": "form16a_year",
+   "fieldtype": "Date",
+   "label": "Year"
+  },
+  {
+   "fieldname": "fd_no",
+   "fieldtype": "Data",
+   "label": "FD Number"
+  },
+  {
+   "description": "Please send the Form16A in respect of Tax deducted under my customer id for the financial year mentioned below.",
+   "fieldname": "request_for_form_16a_section",
+   "fieldtype": "Section Break",
+   "label": "Request for Form 16A"
+  },
+  {
+   "description": "Please provide status of the\nCheque Number below",
+   "fieldname": "request_for_status_of_cheque_section",
+   "fieldtype": "Section Break",
+   "label": "Request for Status of Cheque"
+  },
+  {
+   "fieldname": "cheque_no",
+   "fieldtype": "Data",
+   "label": "Cheque Number"
+  },
+  {
+   "description": "Please choose how the documents have to be dispatched. If the documents have to be sent by post, please confirm that the address is the correct one. If the address is different than the one mentioned below, please first change the address in the bank records. If you are opting for the the documents to be handed over to another person, please mention the mobile number of the person that is going to collect.\n",
+   "fieldname": "dispatch_information_section",
+   "fieldtype": "Section Break",
+   "label": "Dispatch Information"
+  },
+  {
+   "fieldname": "dispatch_mode",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Dispatch Mode",
+   "options": "Send to mailing address\nI'll collect from the brach\nHand it over to someone else"
+  },
+  {
+   "fieldname": "other_person_mobile_number",
+   "fieldtype": "Phone",
+   "label": "Mobile Number"
+  },
+  {
+   "fieldname": "column_break_izxi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mailing_address",
+   "fieldtype": "Text",
+   "label": "Mailing Address"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-27 01:18:05.189071",
+ "modified_by": "Administrator",
+ "module": "Hdfc",
+ "name": "Common Instruction Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
