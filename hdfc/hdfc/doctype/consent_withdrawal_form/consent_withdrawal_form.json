@@ -25,7 +25,7 @@
   "date",
   "identity_proof_document_tab",
   "passport_section",
-  "name_passport",
+  "passport_fullname",
   "dob_passport",
   "column_break_clbl",
   "passport_number",
@@ -156,14 +156,9 @@
    "label": "Date"
   },
   {
-   "fieldname": "name_passport",
-   "fieldtype": "Data",
-   "label": "Name on Passport"
-  },
-  {
    "fieldname": "passport_number",
    "fieldtype": "Data",
-   "label": "Passport No."
+   "label": "Passport Number"
   },
   {
    "fieldname": "dob_passport",
@@ -306,11 +301,16 @@
    "fieldname": "other_document_number",
    "fieldtype": "Data",
    "label": "Document No."
+  },
+  {
+   "fieldname": "passport_fullname",
+   "fieldtype": "Data",
+   "label": "Name as in Passport"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-25 19:14:56.677421",
+ "modified": "2024-01-26 22:44:29.572236",
  "modified_by": "Administrator",
  "module": "Hdfc",
  "name": "Consent Withdrawal Form",
