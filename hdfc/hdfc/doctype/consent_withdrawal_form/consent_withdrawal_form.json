@@ -23,6 +23,8 @@
   "pay_zapp",
   "section_break_qotz",
   "date",
+  "submitter_phone",
+  "submission_time",
   "identity_proof_document_tab",
   "passport_section",
   "name_passport",
@@ -32,7 +34,7 @@
   "voter_id_section",
   "column_break_uxpi",
   "name_voter_id",
-  "dob_pan",
+  "dob_voterid",
   "column_break_pkpp",
   "voter_id_number",
   "driving_license_section",
@@ -185,11 +187,6 @@
    "label": "Voter ID No."
   },
   {
-   "fieldname": "dob_pan",
-   "fieldtype": "Date",
-   "label": "Date of Birth"
-  },
-  {
    "fieldname": "column_break_tbeq",
    "fieldtype": "Column Break"
   },
@@ -306,11 +303,26 @@
    "fieldname": "other_document_number",
    "fieldtype": "Data",
    "label": "Document No."
+  },
+  {
+   "fieldname": "dob_voterid",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "submitter_phone",
+   "fieldtype": "Phone",
+   "label": "Submitter Mobile Number"
+  },
+  {
+   "fieldname": "submission_time",
+   "fieldtype": "Data",
+   "label": "Submission Time"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-25 19:14:56.677421",
+ "modified": "2024-01-27 23:12:36.262332",
  "modified_by": "Administrator",
  "module": "Hdfc",
  "name": "Consent Withdrawal Form",

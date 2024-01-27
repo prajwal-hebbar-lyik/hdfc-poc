@@ -12,6 +12,9 @@
   "reason_for_change",
   "new_name",
   "short_name",
+  "section_break_lnis",
+  "submitter_phone",
+  "submission_time",
   "customer_profile_tab",
   "nature_of_business",
   "details_of_activity",
@@ -262,11 +265,25 @@
    "fieldname": "aadhaar_fullname_2",
    "fieldtype": "Data",
    "label": "Aadhaar fullname"
+  },
+  {
+   "fieldname": "section_break_lnis",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "submitter_phone",
+   "fieldtype": "Phone",
+   "label": "Submitter Mobile Number"
+  },
+  {
+   "fieldname": "submission_time",
+   "fieldtype": "Data",
+   "label": "Submission Time"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-27 00:38:06.804085",
+ "modified": "2024-01-27 23:13:45.033920",
  "modified_by": "Administrator",
  "module": "Hdfc",
  "name": "Name Change Form",
