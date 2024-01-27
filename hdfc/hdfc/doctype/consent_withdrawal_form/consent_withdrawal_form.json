@@ -6,55 +6,67 @@
   "engine": "InnoDB",
   "field_order": [
     "requesters_details_as_per_bank_records_section",
-    "customer_name",
-    "customer_id",
+    "full_name",
     "mobile_number",
     "request_details_section",
     "deposit",
     "cards",
-    "accounts",
-    "loans",
+    "account",
+    "loan",
     "column_break_rdqx",
-    "investments",
+    "investment",
     "insurance",
     "prepaid_cards",
-    "marcahant_solutions",
+    "mercahant_solutions",
     "column_break_tode",
     "working_capital",
-    "payzapp_walet",
+    "pay_zapp",
     "section_break_qotz",
     "date",
     "submitter_phone",
     "submission_time",
     "identity_proof_document_tab",
     "passport_section",
-    "passport_fullname",
+    "name_passport",
+    "dob_passport",
     "column_break_clbl",
     "passport_number",
     "voter_id_section",
     "column_break_uxpi",
-    "voterid_fullname",
+    "name_voter_id",
+    "dob_voterid",
     "column_break_pkpp",
-    "voterid_number",
+    "voter_id_number",
     "driving_license_section",
     "column_break_tbeq",
-    "dl_fullname",
+    "name_dl",
+    "dob_dl",
     "column_break_akab",
     "dl_number",
     "aadhaar_section",
-    "aadhaar_fullname",
+    "name_aadhaar",
+    "dob_aadhaar",
     "column_break_ipst",
-    "aadhaar_uid",
+    "aadhaar_number",
     "pan_section",
     "column_break_fxag",
-    "pan_fullname",
+    "name_pan",
+    "dob_pan_card",
     "column_break_plhb",
     "pan_number",
     "other_documents_section",
     "name_other_document",
-    "other_document_number"
+    "other_document_number",
+    "digital_signature_tab",
+    "digital_signature_type",
+    "digital_signature_id"
   ],
   "fields": [
+    {
+      "fieldname": "full_name",
+      "fieldtype": "Data",
+      "label": "Full Name"
+    },
     {
       "fieldname": "mobile_number",
       "fieldtype": "Phone",
@@ -84,8 +96,26 @@
       "label": "Cards"
     },
     {
+      "default": "0",
+      "fieldname": "account",
+      "fieldtype": "Check",
+      "label": "Accounts"
+    },
+    {
+      "default": "0",
+      "fieldname": "loan",
+      "fieldtype": "Check",
+      "label": "Loans"
+    },
+    {
       "fieldname": "column_break_rdqx",
       "fieldtype": "Column Break"
+    },
+    {
+      "default": "0",
+      "fieldname": "investment",
+      "fieldtype": "Check",
+      "label": "Investments"
     },
     {
       "default": "0",
@@ -100,6 +130,12 @@
       "label": "Prepaid Cards"
     },
     {
+      "default": "0",
+      "fieldname": "mercahant_solutions",
+      "fieldtype": "Check",
+      "label": "Merchant Solutions"
+    },
+    {
       "fieldname": "column_break_tode",
       "fieldtype": "Column Break"
     },
@@ -108,6 +144,12 @@
       "fieldname": "working_capital",
       "fieldtype": "Check",
       "label": "Working Capital"
+    },
+    {
+      "default": "0",
+      "fieldname": "pay_zapp",
+      "fieldtype": "Check",
+      "label": "PayZapp/Wallet"
     },
     {
       "fieldname": "section_break_qotz",
@@ -119,17 +161,42 @@
       "label": "Date"
     },
     {
+      "fieldname": "name_passport",
+      "fieldtype": "Data",
+      "label": "Name on Passport"
+    },
+    {
       "fieldname": "passport_number",
       "fieldtype": "Data",
-      "label": "Passport Number"
+      "label": "Passport No."
+    },
+    {
+      "fieldname": "dob_passport",
+      "fieldtype": "Date",
+      "label": "Date of Birth"
     },
     {
       "fieldname": "column_break_uxpi",
       "fieldtype": "Column Break"
     },
     {
+      "fieldname": "name_voter_id",
+      "fieldtype": "Data",
+      "label": "Name on VoterID"
+    },
+    {
+      "fieldname": "voter_id_number",
+      "fieldtype": "Data",
+      "label": "Voter ID No."
+    },
+    {
       "fieldname": "column_break_tbeq",
       "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "name_dl",
+      "fieldtype": "Data",
+      "label": "Name on Driving License"
     },
     {
       "fieldname": "dl_number",
@@ -137,8 +204,18 @@
       "label": "Driving License No."
     },
     {
+      "fieldname": "dob_dl",
+      "fieldtype": "Date",
+      "label": "Date of Birth"
+    },
+    {
       "fieldname": "column_break_fxag",
       "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "name_pan",
+      "fieldtype": "Data",
+      "label": "Name on PAN"
     },
     {
       "fieldname": "pan_number",
@@ -183,13 +260,33 @@
       "label": "Aadhaar"
     },
     {
+      "fieldname": "name_aadhaar",
+      "fieldtype": "Data",
+      "label": "Name on Aadhaar"
+    },
+    {
+      "fieldname": "dob_aadhaar",
+      "fieldtype": "Date",
+      "label": "Date of Birth"
+    },
+    {
       "fieldname": "column_break_ipst",
       "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "aadhaar_number",
+      "fieldtype": "Data",
+      "label": "Aadhaar No. (Last 4 digits)"
     },
     {
       "fieldname": "pan_section",
       "fieldtype": "Section Break",
       "label": "PAN"
+    },
+    {
+      "fieldname": "dob_pan_card",
+      "fieldtype": "Date",
+      "label": "Date of Birth"
     },
     {
       "fieldname": "column_break_plhb",
@@ -211,84 +308,41 @@
       "label": "Document No."
     },
     {
-      "fieldname": "passport_fullname",
+      "fieldname": "dob_voterid",
+      "fieldtype": "Date",
+      "label": "Date of Birth"
+    },
+    {
+      "fieldname": "submitter_phone",
+      "fieldtype": "Phone",
+      "label": "Submitter Mobile Number"
+    },
+    {
+      "fieldname": "submission_time",
       "fieldtype": "Data",
-      "label": "Name on Passport"
+      "label": "Submission Time"
     },
     {
-      "default": "0",
-      "fieldname": "accounts",
-      "fieldtype": "Check",
-      "label": "Accounts"
+      "fieldname": "digital_signature_tab",
+      "fieldtype": "Tab Break",
+      "label": "Digital Signature"
     },
     {
-      "default": "0",
-      "fieldname": "loans",
-      "fieldtype": "Check",
-      "label": "Loans"
+      "fieldname": "digital_signature_type",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Type of Digital Signature",
+      "options": "Email\nMobile\nAadhaar"
     },
     {
-      "default": "0",
-      "fieldname": "investments",
-      "fieldtype": "Check",
-      "label": "Investments"
-    },
-    {
-      "default": "0",
-      "fieldname": "marcahant_solutions",
-      "fieldtype": "Check",
-      "label": "Merchant Solutions"
-    },
-    {
-      "default": "0",
-      "fieldname": "payzapp_walet",
-      "fieldtype": "Check",
-      "label": "PayZapp/Wallet"
-    },
-    {
-      "fieldname": "voterid_fullname",
+      "fieldname": "digital_signature_id",
       "fieldtype": "Data",
-      "label": "Name on VoterID"
-    },
-    {
-      "fieldname": "voterid_number",
-      "fieldtype": "Data",
-      "label": "Voter ID No."
-    },
-    {
-      "fieldname": "dl_fullname",
-      "fieldtype": "Data",
-      "label": "Name on Driving License"
-    },
-    {
-      "fieldname": "aadhaar_fullname",
-      "fieldtype": "Data",
-      "label": "Name on Aadhaar"
-    },
-    {
-      "fieldname": "aadhaar_uid",
-      "fieldtype": "Data",
-      "label": "Aadhaar No. (Last 4 digits)"
-    },
-    {
-      "fieldname": "customer_name",
-      "fieldtype": "Data",
-      "label": "Full Name"
-    },
-    {
-      "fieldname": "customer_id",
-      "fieldtype": "Data",
-      "label": "Customer ID"
-    },
-    {
-      "fieldname": "pan_fullname",
-      "fieldtype": "Data",
-      "label": "Name on PAN"
+      "label": "ID of Digital Signature"
     }
   ],
   "index_web_pages_for_search": 1,
   "links": [],
-  "modified": "2024-01-26 23:43:49.682400",
+  "modified": "2024-01-27 23:24:18.901904",
   "modified_by": "Administrator",
   "module": "Hdfc",
   "name": "Consent Withdrawal Form",

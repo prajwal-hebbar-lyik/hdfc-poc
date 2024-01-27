@@ -38,16 +38,8 @@
   "joint_account_2",
   "mode_of_operation_2",
   "digital_signature_tab",
-  "primary_applicant_digital_signing_section",
-  "mobile_otp_1",
-  "email_otp_1",
-  "aadhaar_uid_1",
-  "aadhaar_fullname_1",
-  "second_applicant_digital_signing_section",
-  "mobile_otp_2",
-  "email_otp_2",
-  "aadhaar_uid_2",
-  "aadhaar_fullname_2"
+  "digital_signature_type",
+  "digital_signature_id"
  ],
  "fields": [
   {
@@ -217,56 +209,6 @@
    "label": "Digital Signature"
   },
   {
-   "fieldname": "primary_applicant_digital_signing_section",
-   "fieldtype": "Section Break",
-   "label": "Primary Applicant Digital Signing"
-  },
-  {
-   "fieldname": "mobile_otp_1",
-   "fieldtype": "Data",
-   "label": "Sign Using Mobile OTP (Primary Applicant)"
-  },
-  {
-   "fieldname": "email_otp_1",
-   "fieldtype": "Data",
-   "label": "Sign Using Email OTP (Primary Applicant)"
-  },
-  {
-   "fieldname": "aadhaar_uid_1",
-   "fieldtype": "Data",
-   "label": "Aadhaar UID (Primary Applicant)"
-  },
-  {
-   "fieldname": "aadhaar_fullname_1",
-   "fieldtype": "Data",
-   "label": "Aadhaar fullname  (Primary Applicant)"
-  },
-  {
-   "fieldname": "second_applicant_digital_signing_section",
-   "fieldtype": "Section Break",
-   "label": "Second Applicant Digital Signing"
-  },
-  {
-   "fieldname": "mobile_otp_2",
-   "fieldtype": "Data",
-   "label": "Sign Using Mobile OTP"
-  },
-  {
-   "fieldname": "email_otp_2",
-   "fieldtype": "Data",
-   "label": "Sign Using Email OTP"
-  },
-  {
-   "fieldname": "aadhaar_uid_2",
-   "fieldtype": "Data",
-   "label": "Aadhaar UID"
-  },
-  {
-   "fieldname": "aadhaar_fullname_2",
-   "fieldtype": "Data",
-   "label": "Aadhaar fullname"
-  },
-  {
    "fieldname": "section_break_lnis",
    "fieldtype": "Section Break"
   },
@@ -279,11 +221,23 @@
    "fieldname": "submission_time",
    "fieldtype": "Data",
    "label": "Submission Time"
+  },
+  {
+   "fieldname": "digital_signature_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type of Digital Signature",
+   "options": "Email\nMobile\nAadhaar"
+  },
+  {
+   "fieldname": "digital_signature_id",
+   "fieldtype": "Data",
+   "label": "ID of Digital Signature"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-27 23:13:45.033920",
+ "modified": "2024-01-27 23:28:04.357857",
  "modified_by": "Administrator",
  "module": "Hdfc",
  "name": "Name Change Form",
