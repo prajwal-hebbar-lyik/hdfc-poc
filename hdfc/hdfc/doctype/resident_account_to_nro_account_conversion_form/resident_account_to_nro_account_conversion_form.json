@@ -6,7 +6,9 @@
  "engine": "InnoDB",
  "field_order": [
   "bank_use_only",
+  "column_break_pjgj",
   "face_to_face",
+  "column_break_msxx",
   "non_face_to_face",
   "operating_instruction_section",
   "mode_of_operation_nro",
@@ -143,7 +145,15 @@
   "reissuance_of_card",
   "second_applicant_section",
   "delink_card_second",
-  "reissuance_of_card_second"
+  "reissuance_of_card_second",
+  "nomination_details_section_tab",
+  "nominee_related_options",
+  "nominee_name",
+  "address_nominee",
+  "landmark_nominee",
+  "country_nominee",
+  "dob_nominee",
+  "relationshio_with_depositor"
  ],
  "fields": [
   {
@@ -935,11 +945,61 @@
    "in_list_view": 1,
    "label": "Reissuance of Card",
    "options": "Issue ATM Card (Card Code - RTAN0)\nIssue NRO Domestic Debit Card (Card Code - RCA01)\nDo not issue any card"
+  },
+  {
+   "fieldname": "nomination_details_section_tab",
+   "fieldtype": "Tab Break",
+   "label": "Nomination Details"
+  },
+  {
+   "fieldname": "nominee_related_options",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Nominee Related Options",
+   "options": "Yes, I/We wish to nominate (as per details below)\nI wish to retain the existing nominee\nNo, I/We declare that I do not wish to make a nomination"
+  },
+  {
+   "fieldname": "nominee_name",
+   "fieldtype": "Data",
+   "label": "Nominee Name"
+  },
+  {
+   "fieldname": "address_nominee",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fieldname": "landmark_nominee",
+   "fieldtype": "Data",
+   "label": "Landmark"
+  },
+  {
+   "fieldname": "country_nominee",
+   "fieldtype": "Data",
+   "label": "Country"
+  },
+  {
+   "fieldname": "dob_nominee",
+   "fieldtype": "Date",
+   "label": "Date of Birth of Nominee"
+  },
+  {
+   "fieldname": "relationshio_with_depositor",
+   "fieldtype": "Data",
+   "label": "Relationship with Depositor"
+  },
+  {
+   "fieldname": "column_break_pjgj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_msxx",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-27 20:01:15.318478",
+ "modified": "2024-01-27 20:57:36.621455",
  "modified_by": "Administrator",
  "module": "Hdfc",
  "name": "Resident Account To NRO Account Conversion Form",
