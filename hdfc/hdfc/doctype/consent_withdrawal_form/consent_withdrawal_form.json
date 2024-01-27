@@ -56,7 +56,10 @@
   "pan_number",
   "other_documents_section",
   "name_other_document",
-  "other_document_number"
+  "other_document_number",
+  "digital_signature_tab",
+  "digital_signature_type",
+  "digital_signature_id"
  ],
  "fields": [
   {
@@ -318,11 +321,28 @@
    "fieldname": "submission_time",
    "fieldtype": "Data",
    "label": "Submission Time"
+  },
+  {
+   "fieldname": "digital_signature_tab",
+   "fieldtype": "Tab Break",
+   "label": "Digital Signature"
+  },
+  {
+   "fieldname": "digital_signature_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type of Digital Signature",
+   "options": "Email\nMobile\nAadhaar"
+  },
+  {
+   "fieldname": "digital_signature_id",
+   "fieldtype": "Data",
+   "label": "ID of Digital Signature"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-27 23:12:36.262332",
+ "modified": "2024-01-27 23:24:18.901904",
  "modified_by": "Administrator",
  "module": "Hdfc",
  "name": "Consent Withdrawal Form",
