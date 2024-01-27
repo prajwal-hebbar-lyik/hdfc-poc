@@ -1,0 +1,291 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-26 23:50:27.605478",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "customer_information_section",
+  "customer_id",
+  "customer_name",
+  "name_change_section",
+  "reason_for_change",
+  "new_name",
+  "short_name",
+  "customer_profile_tab",
+  "nature_of_business",
+  "details_of_activity",
+  "annual_turnover",
+  "column_break_goql",
+  "iec_code",
+  "value_of_import_export",
+  "is_non_profit",
+  "nature_of_industry",
+  "import_export",
+  "import",
+  "export",
+  "address_type",
+  "owned",
+  "rented_leased",
+  "change_of_signature_tab",
+  "account_1_section",
+  "joint_account_1",
+  "mode_of_operation_1",
+  "account_2_section",
+  "joint_account_2",
+  "mode_of_operation_2",
+  "digital_signature_tab",
+  "primary_applicant_digital_signing_section",
+  "mobile_otp_1",
+  "email_otp_1",
+  "aadhaar_uid_1",
+  "aadhaar_fullname_1",
+  "second_applicant_digital_signing_section",
+  "mobile_otp_2",
+  "email_otp_2",
+  "aadhaar_uid_2",
+  "aadhaar_fullname_2"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer_information_section",
+   "fieldtype": "Section Break",
+   "label": "Customer Information"
+  },
+  {
+   "fieldname": "customer_id",
+   "fieldtype": "Data",
+   "label": "Customer ID"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name"
+  },
+  {
+   "description": "NOTE: Name change in applicable for Individuals and Non Individuals",
+   "fieldname": "name_change_section",
+   "fieldtype": "Section Break",
+   "label": "Name Change"
+  },
+  {
+   "fieldname": "reason_for_change",
+   "fieldtype": "Small Text",
+   "label": "Reason for Change"
+  },
+  {
+   "fieldname": "new_name",
+   "fieldtype": "Data",
+   "label": "New Name"
+  },
+  {
+   "fieldname": "short_name",
+   "fieldtype": "Data",
+   "label": "Short Name"
+  },
+  {
+   "description": "The following fields are relevant only for non-individual customer.\nIf you are an individual customer you can ignore this entire section\n",
+   "fieldname": "customer_profile_tab",
+   "fieldtype": "Tab Break",
+   "label": "Customer Profile"
+  },
+  {
+   "fieldname": "nature_of_business",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Nature of Business",
+   "options": "Manufacturing\nService Provider\nStock Brokers\nReal Estate\nRetail Trader\nWholesale Trading\nOthers"
+  },
+  {
+   "fieldname": "details_of_activity",
+   "fieldtype": "Small Text",
+   "label": "Details of Activity"
+  },
+  {
+   "fieldname": "annual_turnover",
+   "fieldtype": "Int",
+   "label": "Annual Turnover(Rs Lacs)"
+  },
+  {
+   "fieldname": "import_export",
+   "fieldtype": "Section Break",
+   "label": "Are you involved in?"
+  },
+  {
+   "default": "0",
+   "fieldname": "import",
+   "fieldtype": "Check",
+   "label": "Import"
+  },
+  {
+   "default": "0",
+   "fieldname": "export",
+   "fieldtype": "Check",
+   "label": "Export"
+  },
+  {
+   "fieldname": "address_type",
+   "fieldtype": "Section Break",
+   "label": "Registered Address Type"
+  },
+  {
+   "default": "0",
+   "fieldname": "owned",
+   "fieldtype": "Check",
+   "label": "Owned"
+  },
+  {
+   "default": "0",
+   "fieldname": "rented_leased",
+   "fieldtype": "Check",
+   "label": "Rented/Leased"
+  },
+  {
+   "fieldname": "column_break_goql",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "iec_code",
+   "fieldtype": "Data",
+   "label": "IEC Code"
+  },
+  {
+   "fieldname": "value_of_import_export",
+   "fieldtype": "Int",
+   "label": "Value of Import/Export(Rs Lacs)"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_non_profit",
+   "fieldtype": "Check",
+   "label": "Non-Profit Organization"
+  },
+  {
+   "fieldname": "nature_of_industry",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Nature of Industry",
+   "options": "Automobile\nPetrol Pump\nContractor\nOil\nConsultancy\nEducation\nNBFC\nRetail Jewellery\nFurniture/Timber\nBroking\nAdvt.Agencies\nRestaurants\nForex Dealer/Bullion\nChit Funds\nFisheries/Poultry\nCements/Paints\nFMCG\nHospital/Nursing Home/Clinics\nTravel/Tour Agency\nConstruction\nShroff\nOthers"
+  },
+  {
+   "description": "This section is applicable for Individuals ONLY\n\nIMPORTANT\n\nFollowing are the terms for change request:\nThe fresh / new Signature(s) and / or Operating Instructions would be valid once the changes are updated in the system. The Bank will not be responsible for return/dishonour of any such old outstanding / unpaid cheques / debits / requests and which are still in transit and yet to be received / actioned by the Bank and not in the confirmity with the fresh / new Signature(s) and / or Operating Instructions Change request.\nIn case, where the Operating Instructions have been changed from Singly or Either or Survivor to Joint Opetations, the ATM/Debit cards would be hotlisted / discontinued automatically.\nBy digitally signing this document, I agree to these terms",
+   "fieldname": "change_of_signature_tab",
+   "fieldtype": "Tab Break",
+   "label": "Change of Operating Instructions"
+  },
+  {
+   "fieldname": "joint_account_1",
+   "fieldtype": "Data",
+   "label": "Joint Account Number"
+  },
+  {
+   "fieldname": "mode_of_operation_1",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "New mode of operation",
+   "options": "Former or Survivor\nEither of Survivor\nJoint\nAnyone or Survivor"
+  },
+  {
+   "fieldname": "account_1_section",
+   "fieldtype": "Section Break",
+   "label": "Account 1"
+  },
+  {
+   "fieldname": "account_2_section",
+   "fieldtype": "Section Break",
+   "label": "Account 2"
+  },
+  {
+   "fieldname": "joint_account_2",
+   "fieldtype": "Data",
+   "label": "Joint Account Number"
+  },
+  {
+   "fieldname": "mode_of_operation_2",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "New mode of operation",
+   "options": "Former or Survivor\nEither of Survivor\nJoint\nAnyone or Survivor"
+  },
+  {
+   "description": "NOTE:\nAll account holders should digitally sign only in case of change of operating instructions. If operating instructions are not changing then only the primary account holder (1st applicant) should sign",
+   "fieldname": "digital_signature_tab",
+   "fieldtype": "Tab Break",
+   "label": "Digital Signature"
+  },
+  {
+   "fieldname": "primary_applicant_digital_signing_section",
+   "fieldtype": "Section Break",
+   "label": "Primary Applicant Digital Signing"
+  },
+  {
+   "fieldname": "mobile_otp_1",
+   "fieldtype": "Data",
+   "label": "Sign Using Mobile OTP (Primary Applicant)"
+  },
+  {
+   "fieldname": "email_otp_1",
+   "fieldtype": "Data",
+   "label": "Sign Using Email OTP (Primary Applicant)"
+  },
+  {
+   "fieldname": "aadhaar_uid_1",
+   "fieldtype": "Data",
+   "label": "Aadhaar UID (Primary Applicant)"
+  },
+  {
+   "fieldname": "aadhaar_fullname_1",
+   "fieldtype": "Data",
+   "label": "Aadhaar fullname  (Primary Applicant)"
+  },
+  {
+   "fieldname": "second_applicant_digital_signing_section",
+   "fieldtype": "Section Break",
+   "label": "Second Applicant Digital Signing"
+  },
+  {
+   "fieldname": "mobile_otp_2",
+   "fieldtype": "Data",
+   "label": "Sign Using Mobile OTP"
+  },
+  {
+   "fieldname": "email_otp_2",
+   "fieldtype": "Data",
+   "label": "Sign Using Email OTP"
+  },
+  {
+   "fieldname": "aadhaar_uid_2",
+   "fieldtype": "Data",
+   "label": "Aadhaar UID"
+  },
+  {
+   "fieldname": "aadhaar_fullname_2",
+   "fieldtype": "Data",
+   "label": "Aadhaar fullname"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-27 00:38:06.804085",
+ "modified_by": "Administrator",
+ "module": "Hdfc",
+ "name": "Name Change Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
