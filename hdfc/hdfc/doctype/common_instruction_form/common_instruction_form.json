@@ -6,32 +6,39 @@
  "engine": "InnoDB",
  "field_order": [
   "requesters_details_as_per_bank_records_section",
-  "customer_name",
   "customer_id",
-  "mobile_number",
-  "request_for_statement_section",
+  "account_no",
+  "statement_section",
   "statement_from",
-  "statement_to",
-  "column_break_sxwl",
   "reason_for_request",
-  "request_for_interest_certificate_section",
+  "column_break_sxwl",
+  "statement_to",
+  "interest_certificate_section",
   "int_cert_from",
+  "column_break_vwtu",
   "int_cert_to",
-  "request_for_balance_confirmation_section",
+  "balance_confirmation_section",
   "balance_confirmation",
-  "request_for_fd_balances_section",
+  "fd_balances_section",
   "fd_balances",
   "fd_confirmation_section",
   "fd_no",
-  "request_for_form_16a_section",
+  "form_16a_section",
   "form16a_year",
-  "request_for_status_of_cheque_section",
+  "status_of_cheque_section",
   "cheque_no",
   "dispatch_information_section",
   "dispatch_mode",
   "other_person_mobile_number",
   "column_break_izxi",
-  "mailing_address"
+  "mailing_address",
+  "issue_passbook_section",
+  "passbook_consent",
+  "premature_liquidation_section",
+  "deposit_number",
+  "means_to_credit",
+  "column_break_mlbd",
+  "deposit_owner"
  ],
  "fields": [
   {
@@ -40,25 +47,9 @@
    "label": "Requester's Details (as per bank records)"
   },
   {
-   "fieldname": "customer_name",
-   "fieldtype": "Data",
-   "label": "Full Name"
-  },
-  {
    "fieldname": "customer_id",
    "fieldtype": "Data",
    "label": "Customer ID"
-  },
-  {
-   "fieldname": "mobile_number",
-   "fieldtype": "Phone",
-   "label": "Registered Mobile No."
-  },
-  {
-   "description": "I request statement for the period mentioned below. I have also mentioned the reason for this request.",
-   "fieldname": "request_for_statement_section",
-   "fieldtype": "Section Break",
-   "label": "Request for Statement"
   },
   {
    "fieldname": "statement_from",
@@ -80,12 +71,6 @@
    "label": "Reason for request"
   },
   {
-   "description": "Please provide Interest Certificate CASA/FD Account number given above for the years mentioned below.\n",
-   "fieldname": "request_for_interest_certificate_section",
-   "fieldtype": "Section Break",
-   "label": "Request for Interest Certificate"
-  },
-  {
    "fieldname": "int_cert_from",
    "fieldtype": "Date",
    "label": "Year From:"
@@ -96,23 +81,11 @@
    "label": "Year To:"
   },
   {
-   "description": "Please send me a balance confirmation for the account number mentioned above.",
-   "fieldname": "request_for_balance_confirmation_section",
-   "fieldtype": "Section Break",
-   "label": "Request for Balance Confirmation"
-  },
-  {
    "fieldname": "balance_confirmation",
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Request Account Balance",
    "options": "Yes\nNo"
-  },
-  {
-   "description": "Please provide me the current FD balance(s) booked under the customer id mentioned above.",
-   "fieldname": "request_for_fd_balances_section",
-   "fieldtype": "Section Break",
-   "label": "Request for FD Balance(s)"
   },
   {
    "fieldname": "fd_balances",
@@ -138,21 +111,9 @@
    "label": "FD Number"
   },
   {
-   "description": "Please send the Form16A in respect of Tax deducted under my customer id for the financial year mentioned below.",
-   "fieldname": "request_for_form_16a_section",
-   "fieldtype": "Section Break",
-   "label": "Request for Form 16A"
-  },
-  {
-   "description": "Please provide status of the\nCheque Number below",
-   "fieldname": "request_for_status_of_cheque_section",
-   "fieldtype": "Section Break",
-   "label": "Request for Status of Cheque"
-  },
-  {
    "fieldname": "cheque_no",
    "fieldtype": "Data",
-   "label": "Cheque Number"
+   "label": "Cheque No."
   },
   {
    "description": "Please choose how the documents have to be dispatched. If the documents have to be sent by post, please confirm that the address is the correct one. If the address is different than the one mentioned below, please first change the address in the bank records. If you are opting for the the documents to be handed over to another person, please mention the mobile number of the person that is going to collect.\n",
@@ -165,12 +126,12 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Dispatch Mode",
-   "options": "Send to mailing address\nI'll collect from the brach\nHand it over to someone else"
+   "options": "Send to mailing address\nI'll collect from the branch\nHand it over to someone else"
   },
   {
    "fieldname": "other_person_mobile_number",
    "fieldtype": "Phone",
-   "label": "Mobile Number"
+   "label": "Mobile No."
   },
   {
    "fieldname": "column_break_izxi",
@@ -180,11 +141,96 @@
    "fieldname": "mailing_address",
    "fieldtype": "Text",
    "label": "Mailing Address"
+  },
+  {
+   "description": "I request statement for the period mentioned below. I have also mentioned the reason for this request.",
+   "fieldname": "statement_section",
+   "fieldtype": "Section Break",
+   "label": "Request for Statement"
+  },
+  {
+   "description": "Please provide Interest Certificate CASA/FD Account number given above for the years mentioned below.\n",
+   "fieldname": "interest_certificate_section",
+   "fieldtype": "Section Break",
+   "label": "Request for Interest Certificate"
+  },
+  {
+   "description": "Please send me a balance confirmation for the account number mentioned above.",
+   "fieldname": "balance_confirmation_section",
+   "fieldtype": "Section Break",
+   "label": "Request for Balance Confirmation"
+  },
+  {
+   "description": "Please provide me the current FD balance(s) booked under the customer id mentioned above.",
+   "fieldname": "fd_balances_section",
+   "fieldtype": "Section Break",
+   "label": "Request for FD Balance(s)"
+  },
+  {
+   "description": "Please send the Form16A in respect of Tax deducted under my customer id for the financial year mentioned below.",
+   "fieldname": "form_16a_section",
+   "fieldtype": "Section Break",
+   "label": "Request for Form 16A"
+  },
+  {
+   "description": "Please provide status of the\nCheque Number below",
+   "fieldname": "status_of_cheque_section",
+   "fieldtype": "Section Break",
+   "label": "Request for Status of Cheque"
+  },
+  {
+   "fieldname": "account_no",
+   "fieldtype": "Data",
+   "label": "Account No."
+  },
+  {
+   "fieldname": "column_break_vwtu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "issue_passbook_section",
+   "fieldtype": "Section Break",
+   "label": "Issue Passbook"
+  },
+  {
+   "description": "I/we, request you to issue a Passbook (First time/ Duplicate) for Savings A/c No mentioned in this form. I/We understand that the facility of getting statement has been discontinued for passbook registered customer. \nI/we have read and agree to be bound by the terms and conditions of the savings account.\nI understand that there is a charge applicable for duplicate pass book issuance which would be debited to the Account number mentioned in this form.",
+   "fieldname": "passbook_consent",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Consent",
+   "options": "Yes\nNo"
+  },
+  {
+   "description": "We request you to kindly close the deposit account mentioned below, held in my/ our name with your bank. Also request you to credit the proceeds as per my choice below.\nWe understand that as per the bank's process the customers need to surrender the original renewed deposit ad- vice. However, we are in immediate need of the funds and hence request you to process the request for closure of the captioned account pending receipt of the renewed deposit advice. I/we hereby agree and undertake that on receipt of the renewed advice already dispatched to me/us, I/we shall destroy the same at our end. This letter of request for liquidation of the above referred deposit would discharge the bank of the liability on the said fixed deposits towards me/us and I / we will have no right of any claims on the bank on the said fixed deposit.",
+   "fieldname": "premature_liquidation_section",
+   "fieldtype": "Section Break",
+   "label": "Premature Liquidation"
+  },
+  {
+   "fieldname": "deposit_number",
+   "fieldtype": "Data",
+   "label": "Deposit No."
+  },
+  {
+   "fieldname": "column_break_mlbd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "deposit_owner",
+   "fieldtype": "Data",
+   "label": "Deposit in the name of"
+  },
+  {
+   "fieldname": "means_to_credit",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Means to credit",
+   "options": "My/Own Account\nIssue Manager's Cheque"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-27 01:18:05.189071",
+ "modified": "2024-01-27 10:01:23.418931",
  "modified_by": "Administrator",
  "module": "Hdfc",
  "name": "Common Instruction Form",
