@@ -1,0 +1,1024 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-27 15:41:52.783520",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "bank_use_only",
+  "column_break_pjgj",
+  "face_to_face",
+  "column_break_msxx",
+  "non_face_to_face",
+  "operating_instruction_section",
+  "mode_of_operation_nro",
+  "pep_declaration_section",
+  "first_applicant_politically_exposed",
+  "second_applicant_politically_exposed",
+  "first_applicants_details_tab",
+  "oersinal_section",
+  "residential_status",
+  "date_of_birth",
+  "applicant_type",
+  "marital_status",
+  "spouse_name",
+  "existing_custom_id",
+  "existing_customer_id_available",
+  "mother_maiden_name",
+  "father_name",
+  "country_ies_of_tax_residency_1",
+  "country_ies_of_tax_residency_2",
+  "nationality_1",
+  "nationality_2",
+  "column_break_slmv",
+  "is_pan_available",
+  "pan_number",
+  "aadhaar_available",
+  "aadhaar_number",
+  "city_of_birth",
+  "country_of_birth",
+  "tax_id_number_1",
+  "tax_id_number_2",
+  "tin_type_1",
+  "tin_type_2",
+  "column_break_xurj",
+  "passport_number",
+  "passport_expiry_date",
+  "visa_type",
+  "visa_expiry_date",
+  "overseas_address_section",
+  "choice_of_correspondence",
+  "attached_address_proof_of",
+  "address_proof",
+  "address_type",
+  "address_foreign",
+  "landmark_foreign",
+  "tax_purpose_address_different",
+  "indian_address_section",
+  "address_india",
+  "landmark_india",
+  "address_type_india",
+  "no_indian_address",
+  "contact_details_section",
+  "email_id",
+  "mobile_number",
+  "tel_residence",
+  "tel_office",
+  "insta_alert_sms",
+  "insta_alert_email",
+  "occupational_and_income_details_section",
+  "source_of_funds",
+  "occupation",
+  "employed_with",
+  "self_employed_professional",
+  "self_employed_since",
+  "date_of_incorporation",
+  "nature_of_business",
+  "type_of_company_firm",
+  "residence_type",
+  "gross_annual_income",
+  "name_of_currency",
+  "second_applicants_details_tab",
+  "personal_details_section",
+  "kyc_number_second",
+  "date_of_birth_second",
+  "applicant_type_second",
+  "marital_status_second",
+  "residential_status_second",
+  "spouse_name_second",
+  "mother_maiden_name_second",
+  "father_name_second",
+  "existing_customer_id_second",
+  "document_type_second",
+  "document_number_second",
+  "document_expiry_date_second",
+  "column_break_ghwi",
+  "is_pan_available_second",
+  "pan_number_second",
+  "is_aadhaar_available_second",
+  "country_ies_tax_residency_1_second",
+  "country_ies_tax_residency_2_second",
+  "nationality_1_second",
+  "nationality_2_second",
+  "column_break_oukn",
+  "visa_type_second",
+  "visa_expiry_date_second",
+  "tax",
+  "tax_id_number_1_second",
+  "tax_id_number_2_second",
+  "tine_type_1_second",
+  "tin_type_2_second",
+  "overseas_address_second",
+  "choice_of_correspondence_second",
+  "attached_address_proof_of_second",
+  "address_proof_second",
+  "address_type_second",
+  "address_foreign_second",
+  "landmark_foreign_second",
+  "tax_purpose_address_different_second",
+  "indian_address_second",
+  "address_india_second",
+  "landmark_india_second",
+  "address_type_india_second",
+  "no_indian_address_second",
+  "contact_details_second",
+  "email_id_second",
+  "mobile_number_second",
+  "tel_residence_second",
+  "tel_office_second",
+  "insta_alert_sms_second",
+  "insta_alert_email_second",
+  "occupational_second",
+  "source_of_funds_second",
+  "occupation_second",
+  "employed_with_second",
+  "self_employed_professional_second",
+  "self_employed_since_second",
+  "date_of_incorporation_second",
+  "nature_of_business_second",
+  "type_of_company_firm_second",
+  "residence_type_second",
+  "gross_annual_income_second",
+  "name_of_currency_second",
+  "debit_card_hotlisting_and_reissuance_tab",
+  "first_applicant_section",
+  "reissuance_of_card",
+  "second_applicant_section",
+  "delink_card_second",
+  "reissuance_of_card_second",
+  "nomination_details_section_tab",
+  "nominee_related_options",
+  "nominee_name",
+  "address_nominee",
+  "landmark_nominee",
+  "country_nominee",
+  "dob_nominee",
+  "relationshio_with_depositor"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "bank_use_only",
+   "fieldtype": "Check",
+   "label": "Bank Use Only"
+  },
+  {
+   "default": "0",
+   "fieldname": "face_to_face",
+   "fieldtype": "Check",
+   "label": "Face to Face"
+  },
+  {
+   "default": "0",
+   "fieldname": "non_face_to_face",
+   "fieldtype": "Check",
+   "label": "Non Face to Face"
+  },
+  {
+   "fieldname": "operating_instruction_section",
+   "fieldtype": "Section Break",
+   "label": "Operating Instruction"
+  },
+  {
+   "fieldname": "mode_of_operation_nro",
+   "fieldtype": "Select",
+   "label": "NRO Account (Mode of Operation)",
+   "options": "Single\nEither/Anyone or survivor\nFormer or survivor\nMinor under Guardian\nJointly (ATM/Debit card not issued)"
+  },
+  {
+   "fieldname": "first_applicants_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "First Applicant's Details"
+  },
+  {
+   "fieldname": "oersinal_section",
+   "fieldtype": "Section Break",
+   "label": "Personal Details"
+  },
+  {
+   "fieldname": "residential_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Residential Status",
+   "options": "NRI\nPIO/OCI"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "applicant_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Applicant Type",
+   "options": "Minor\nNot a Minor"
+  },
+  {
+   "fieldname": "marital_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Marital Status",
+   "options": "Married\nUnmarried\nOther"
+  },
+  {
+   "fieldname": "spouse_name",
+   "fieldtype": "Data",
+   "label": "Spouse's Name"
+  },
+  {
+   "fieldname": "existing_custom_id",
+   "fieldtype": "Data",
+   "label": "Existing Customer Id"
+  },
+  {
+   "fieldname": "existing_customer_id_available",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Existing Customer ID Available",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "pan_number",
+   "fieldtype": "Data",
+   "label": "PAN No."
+  },
+  {
+   "fieldname": "is_pan_available",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Is PAN Available",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "column_break_slmv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "aadhaar_available",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Is Aadhaar Available",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "aadhaar_number",
+   "fieldtype": "Data",
+   "label": "Aadhaar No."
+  },
+  {
+   "fieldname": "mother_maiden_name",
+   "fieldtype": "Data",
+   "label": "Mother's Maiden Name"
+  },
+  {
+   "fieldname": "column_break_xurj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "passport_number",
+   "fieldtype": "Data",
+   "label": "Passport No."
+  },
+  {
+   "fieldname": "passport_expiry_date",
+   "fieldtype": "Data",
+   "label": "Passport Expiry Date"
+  },
+  {
+   "fieldname": "visa_type",
+   "fieldtype": "Data",
+   "label": "Visa Type"
+  },
+  {
+   "fieldname": "visa_expiry_date",
+   "fieldtype": "Data",
+   "label": "Visa Expiry Date"
+  },
+  {
+   "fieldname": "father_name",
+   "fieldtype": "Data",
+   "label": "Father's Name"
+  },
+  {
+   "fieldname": "country_ies_of_tax_residency_1",
+   "fieldtype": "Data",
+   "label": "Country / ies of Tax Residency (Outside India) - 1"
+  },
+  {
+   "fieldname": "country_ies_of_tax_residency_2",
+   "fieldtype": "Data",
+   "label": "Country / ies of Tax Residency (Outside India) - 1"
+  },
+  {
+   "fieldname": "nationality_1",
+   "fieldtype": "Data",
+   "label": "Nationality - 1"
+  },
+  {
+   "fieldname": "nationality_2",
+   "fieldtype": "Data",
+   "label": "Nationality - 2"
+  },
+  {
+   "fieldname": "city_of_birth",
+   "fieldtype": "Data",
+   "label": "City of Birth"
+  },
+  {
+   "fieldname": "tax_id_number_1",
+   "fieldtype": "Data",
+   "label": "Tax ID No. (for residents of other country) - 1"
+  },
+  {
+   "fieldname": "tax_id_number_2",
+   "fieldtype": "Data",
+   "label": "Tax ID No. (for residents of other country) - 2"
+  },
+  {
+   "fieldname": "tin_type_1",
+   "fieldtype": "Data",
+   "label": "TIN Type - 1"
+  },
+  {
+   "fieldname": "tin_type_2",
+   "fieldtype": "Data",
+   "label": "TIN Type - 2"
+  },
+  {
+   "fieldname": "overseas_address_section",
+   "fieldtype": "Section Break",
+   "label": "Overseas Address"
+  },
+  {
+   "fieldname": "choice_of_correspondence",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Choice of Correspondence",
+   "options": "Indian Address\nOverseas Address"
+  },
+  {
+   "fieldname": "address_proof",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Address Proof",
+   "options": "Passport\nDriving License\nUID (Aadhaar)\nVoter ID\nNREGA Job Card\nOthers"
+  },
+  {
+   "fieldname": "address_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Address Type",
+   "options": "Residence\nBusiness\nResidential and Business\nRegistered Office"
+  },
+  {
+   "default": "0",
+   "fieldname": "tax_purpose_address_different",
+   "fieldtype": "Check",
+   "label": "Address for Tax Purpose is other than correspondence address"
+  },
+  {
+   "fieldname": "indian_address_section",
+   "fieldtype": "Section Break",
+   "label": "Indian Address"
+  },
+  {
+   "fieldname": "address_india",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fieldname": "address_foreign",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Address"
+  },
+  {
+   "fieldname": "landmark_foreign",
+   "fieldtype": "Data",
+   "label": "Landmark"
+  },
+  {
+   "fieldname": "landmark_india",
+   "fieldtype": "Data",
+   "label": "Landmark"
+  },
+  {
+   "fieldname": "address_type_india",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Address Type",
+   "options": "Residence\nBusiness\nResidence and Business\nRegistered Office"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_indian_address",
+   "fieldtype": "Check",
+   "label": "Do Not have Indian Address"
+  },
+  {
+   "fieldname": "contact_details_section",
+   "fieldtype": "Section Break",
+   "label": "Contact Details"
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email Id"
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Phone",
+   "label": "Mobile Number"
+  },
+  {
+   "fieldname": "tel_residence",
+   "fieldtype": "Data",
+   "label": "Tel (R)"
+  },
+  {
+   "fieldname": "tel_office",
+   "fieldtype": "Data",
+   "label": "Tel (O)"
+  },
+  {
+   "default": "0",
+   "fieldname": "insta_alert_sms",
+   "fieldtype": "Check",
+   "label": "Registered for Insta Alert (SMS)"
+  },
+  {
+   "default": "0",
+   "fieldname": "insta_alert_email",
+   "fieldtype": "Check",
+   "label": "Registered for Insta Alert (E-Mail)"
+  },
+  {
+   "fieldname": "occupational_and_income_details_section",
+   "fieldtype": "Section Break",
+   "label": "Occupational and Income Details"
+  },
+  {
+   "fieldname": "source_of_funds",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Source of Funds",
+   "options": "Salary\nBusiness Income\nAgriculture\nInvestment Income\nOthers"
+  },
+  {
+   "fieldname": "occupation",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Occupation",
+   "options": "Salaried\nSelf-employed\nRetired\nSelf-employed Professional\nHousewife\nStudent\nUnemployed\nMariner\nFirst Time Visitor\nMinor\nSenior Citizen\nOthers"
+  },
+  {
+   "fieldname": "employed_with",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Employed with",
+   "options": "Private Ltd\nPartnership\nProprietorship\nPublic Limited\nPublic Sector\nGovernment\nMultinational\nOthers"
+  },
+  {
+   "fieldname": "self_employed_professional",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Self Employed Professional",
+   "options": "Doctor\nCA\nLawyer\nArchitect\nIT Consultant\nOthers"
+  },
+  {
+   "fieldname": "self_employed_since",
+   "fieldtype": "Data",
+   "label": "Self Employed since (Years & Months)"
+  },
+  {
+   "fieldname": "date_of_incorporation",
+   "fieldtype": "Date",
+   "label": "Date of Incorporation"
+  },
+  {
+   "fieldname": "nature_of_business",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Nature of Business",
+   "options": "Manufacturing\nAgriculture\nService Provider\nStock Broker\nTrader\nReal Estate\nOthers"
+  },
+  {
+   "fieldname": "type_of_company_firm",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type of Company/Firm",
+   "options": "Sole Proprietorship\nPartnership\nPublic Ltd Co.\nPrivate Ltd Co.\nOthers"
+  },
+  {
+   "fieldname": "residence_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Residence Type",
+   "options": "Owned\nRented/Leased\nAncestral/Family\nCompany Provided"
+  },
+  {
+   "fieldname": "gross_annual_income",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Gross Annual Income (in Rs.)",
+   "options": "<50K\n50K - 1L\n1- 3L\n3 - 5L\n5 - 7.5L\n7.5 - 10L\n10 -15L\n15 -25L\n25 - 50L\n50L - 1CR\n>1CR"
+  },
+  {
+   "fieldname": "name_of_currency",
+   "fieldtype": "Data",
+   "label": "Name of Currency (foreign currency of earning)"
+  },
+  {
+   "fieldname": "second_applicants_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Second Applicant's Details",
+   "options": "Indian Address\nOverseas Address"
+  },
+  {
+   "fieldname": "personal_details_section",
+   "fieldtype": "Section Break",
+   "label": "Personal Details"
+  },
+  {
+   "fieldname": "kyc_number_second",
+   "fieldtype": "Data",
+   "label": "KYC Number of Related Person (if available)"
+  },
+  {
+   "fieldname": "date_of_birth_second",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "applicant_type_second",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Applicant Type",
+   "options": "Minor\nGuardian"
+  },
+  {
+   "fieldname": "marital_status_second",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Marital Status",
+   "options": "Married\nUnmarried\nOther"
+  },
+  {
+   "fieldname": "residential_status_second",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Residential Status",
+   "options": "NRI\nPIO/OCI\nResident (F/S)"
+  },
+  {
+   "fieldname": "country_of_birth",
+   "fieldtype": "Data",
+   "label": "Country of Birth"
+  },
+  {
+   "fieldname": "spouse_name_second",
+   "fieldtype": "Data",
+   "label": "Spouse's Name"
+  },
+  {
+   "fieldname": "existing_customer_id_second",
+   "fieldtype": "Data",
+   "label": "Existing Customer ID"
+  },
+  {
+   "fieldname": "column_break_ghwi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "is_pan_available_second",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Is PAN Available?",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "pan_number_second",
+   "fieldtype": "Data",
+   "label": "PAN No."
+  },
+  {
+   "fieldname": "is_aadhaar_available_second",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Is Aadhaar Available?",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "document_type_second",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Document Type (for proof)",
+   "options": "Passport\nDriving Lisence\nAadhaar Card\nVoter Card\nNREGA Job Card"
+  },
+  {
+   "fieldname": "document_number_second",
+   "fieldtype": "Data",
+   "label": "Document Number"
+  },
+  {
+   "fieldname": "document_expiry_date_second",
+   "fieldtype": "Date",
+   "label": "Document Expiry Date"
+  },
+  {
+   "fieldname": "country_ies_tax_residency_1_second",
+   "fieldtype": "Data",
+   "label": "Country / ies of Tax Residency - 1"
+  },
+  {
+   "fieldname": "country_ies_tax_residency_2_second",
+   "fieldtype": "Data",
+   "label": "Country / ies of Tax Residency - 2"
+  },
+  {
+   "fieldname": "nationality_1_second",
+   "fieldtype": "Data",
+   "label": "Nationality - 1"
+  },
+  {
+   "fieldname": "nationality_2_second",
+   "fieldtype": "Data",
+   "label": "Nationality - 2"
+  },
+  {
+   "fieldname": "column_break_oukn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "visa_type_second",
+   "fieldtype": "Data",
+   "label": "Visa Type"
+  },
+  {
+   "fieldname": "visa_expiry_date_second",
+   "fieldtype": "Date",
+   "label": "Visa Expiry Date"
+  },
+  {
+   "fieldname": "mother_maiden_name_second",
+   "fieldtype": "Data",
+   "label": "Mother's Maiden Name"
+  },
+  {
+   "fieldname": "father_name_second",
+   "fieldtype": "Data",
+   "label": "Father's Name"
+  },
+  {
+   "fieldname": "tax",
+   "fieldtype": "Data",
+   "label": "Tax"
+  },
+  {
+   "fieldname": "tax_id_number_1_second",
+   "fieldtype": "Data",
+   "label": "Tax ID No. (TIN) for other country - 1"
+  },
+  {
+   "fieldname": "tax_id_number_2_second",
+   "fieldtype": "Data",
+   "label": "Tax ID No. (TIN) for other country - 2"
+  },
+  {
+   "fieldname": "tine_type_1_second",
+   "fieldtype": "Data",
+   "label": "TIN Type - 1"
+  },
+  {
+   "fieldname": "tin_type_2_second",
+   "fieldtype": "Data",
+   "label": "TIN Type - 2"
+  },
+  {
+   "fieldname": "overseas_address_second",
+   "fieldtype": "Section Break",
+   "label": "Overseas Address"
+  },
+  {
+   "fieldname": "choice_of_correspondence_second",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Choice of Correspondence",
+   "options": "Indian Address\nOverseas Address"
+  },
+  {
+   "fieldname": "address_foreign_second",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fieldname": "landmark_foreign_second",
+   "fieldtype": "Data",
+   "label": "Landmark"
+  },
+  {
+   "fieldname": "address_type_second",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Address Type",
+   "options": "Residence\nBusiness\nResidential and Business\nRegistered Office"
+  },
+  {
+   "default": "0",
+   "fieldname": "tax_purpose_address_different_second",
+   "fieldtype": "Check",
+   "label": "Address for Tax Purpose is other than correspondence address"
+  },
+  {
+   "fieldname": "attached_address_proof_of",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Attached Address Proof Of",
+   "options": "Indian Address\nOverseas Address"
+  },
+  {
+   "fieldname": "attached_address_proof_of_second",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Attached Address Proof of",
+   "options": "Indian Address\nOverseas Address"
+  },
+  {
+   "fieldname": "address_proof_second",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Address Proof",
+   "options": "Passport\nDriving License\nUID (Aadhaar)\nVoter ID\nNREGA Job Card\nOthers"
+  },
+  {
+   "fieldname": "indian_address_second",
+   "fieldtype": "Section Break",
+   "label": "Indian Address"
+  },
+  {
+   "fieldname": "address_india_second",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fieldname": "landmark_india_second",
+   "fieldtype": "Data",
+   "label": "Landmark"
+  },
+  {
+   "fieldname": "address_type_india_second",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Address Type",
+   "options": "Residence\nBusiness\nResidential and Business\nRegistered Office"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_indian_address_second",
+   "fieldtype": "Check",
+   "label": "Do Not Have Indian Address"
+  },
+  {
+   "fieldname": "contact_details_second",
+   "fieldtype": "Section Break",
+   "label": "Contact Details"
+  },
+  {
+   "fieldname": "email_id_second",
+   "fieldtype": "Data",
+   "label": "Email ID"
+  },
+  {
+   "fieldname": "mobile_number_second",
+   "fieldtype": "Phone",
+   "label": "Mobile Number"
+  },
+  {
+   "fieldname": "tel_residence_second",
+   "fieldtype": "Data",
+   "label": "Tel (R)"
+  },
+  {
+   "fieldname": "tel_office_second",
+   "fieldtype": "Data",
+   "label": "Tel (O)"
+  },
+  {
+   "default": "0",
+   "fieldname": "insta_alert_sms_second",
+   "fieldtype": "Check",
+   "label": "Registered for Insta Alert (SMS)"
+  },
+  {
+   "default": "0",
+   "fieldname": "insta_alert_email_second",
+   "fieldtype": "Check",
+   "label": "Registered for Insta Alert (Email)"
+  },
+  {
+   "fieldname": "occupational_second",
+   "fieldtype": "Section Break",
+   "label": "Occupational and Income Details"
+  },
+  {
+   "fieldname": "source_of_funds_second",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Source of Funds",
+   "options": "Salary\nBusiness Income\nAgriculture\nInvestment Income\nOthers"
+  },
+  {
+   "fieldname": "occupation_second",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Occupation",
+   "options": "Salaried\nSelf-Employed\nRetired\nSelf-Employed Professional\nHousewife\nStudent\nUnemployed\nMariner\nFirst Time Visitor\nMinor\nSenior Citizen\nOthers\nOthers"
+  },
+  {
+   "fieldname": "employed_with_second",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Employed With",
+   "options": "Private Ltd\nPartnership\nProprietorship\nPublic Limited\nPublic Sector\nGovernment\nMultinational\nOthers"
+  },
+  {
+   "fieldname": "self_employed_professional_second",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Self Employed Professional",
+   "options": "Doctor\nCA\nLawyer\nArchitect\nIT Consultant\nOthers"
+  },
+  {
+   "fieldname": "self_employed_since_second",
+   "fieldtype": "Data",
+   "label": "Self Employed Since (Years & Months)"
+  },
+  {
+   "fieldname": "date_of_incorporation_second",
+   "fieldtype": "Date",
+   "label": "Date of Incorporation"
+  },
+  {
+   "fieldname": "nature_of_business_second",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Nature of Business",
+   "options": "Manufacturing\nService Provider\nAgriculture\nStock Broker\nTrader\nReal Estate\nOthers"
+  },
+  {
+   "fieldname": "type_of_company_firm_second",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type of Company/Firm",
+   "options": "Sole Proprietorship\nPartnership\nPublic Ltd Co.\nPrivate Ltd Co.\nOthers"
+  },
+  {
+   "fieldname": "residence_type_second",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Residence Type",
+   "options": "Owned\nRented/Leased\nAncestral/Family\nCompany Provided"
+  },
+  {
+   "fieldname": "gross_annual_income_second",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Gross Annual Income (in Rs.)",
+   "options": "<50K\n50K - 1L\n1 - 3L\n3 - 5L\n5 - 7.5L\n7.5 - 10L\n10 - 15L\n15 - 25L\n25 - 50L\n50L - 1CR\n>1CR"
+  },
+  {
+   "fieldname": "name_of_currency_second",
+   "fieldtype": "Data",
+   "label": "Name of Currency (foreign currency of earning)"
+  },
+  {
+   "fieldname": "pep_declaration_section",
+   "fieldtype": "Section Break",
+   "label": "PEP Declaration"
+  },
+  {
+   "fieldname": "first_applicant_politically_exposed",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "First Applicant Politically Exposed",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "second_applicant_politically_exposed",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Second Applicant Politically Exposed",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "debit_card_hotlisting_and_reissuance_tab",
+   "fieldtype": "Tab Break",
+   "label": "Debit Card Hotlisting and Reissuance"
+  },
+  {
+   "fieldname": "first_applicant_section",
+   "fieldtype": "Section Break",
+   "label": "First Applicant"
+  },
+  {
+   "fieldname": "reissuance_of_card",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Reissuance of Card",
+   "options": "Issue ATM Card (Card Code - RTAN0)\nIssue NRO Domestic Debit Card (Card Code - RCA01)\nDo not issue any card"
+  },
+  {
+   "fieldname": "second_applicant_section",
+   "fieldtype": "Section Break",
+   "label": "Second Applicant"
+  },
+  {
+   "default": "0",
+   "fieldname": "delink_card_second",
+   "fieldtype": "Check",
+   "label": "Delink this card it is linked to more than 1 accounts. (applicable to Residential Indian)"
+  },
+  {
+   "fieldname": "reissuance_of_card_second",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Reissuance of Card",
+   "options": "Issue ATM Card (Card Code - RTAN0)\nIssue NRO Domestic Debit Card (Card Code - RCA01)\nDo not issue any card"
+  },
+  {
+   "fieldname": "nomination_details_section_tab",
+   "fieldtype": "Tab Break",
+   "label": "Nomination Details"
+  },
+  {
+   "fieldname": "nominee_related_options",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Nominee Related Options",
+   "options": "Yes, I/We wish to nominate (as per details below)\nI wish to retain the existing nominee\nNo, I/We declare that I do not wish to make a nomination"
+  },
+  {
+   "fieldname": "nominee_name",
+   "fieldtype": "Data",
+   "label": "Nominee Name"
+  },
+  {
+   "fieldname": "address_nominee",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fieldname": "landmark_nominee",
+   "fieldtype": "Data",
+   "label": "Landmark"
+  },
+  {
+   "fieldname": "country_nominee",
+   "fieldtype": "Data",
+   "label": "Country"
+  },
+  {
+   "fieldname": "dob_nominee",
+   "fieldtype": "Date",
+   "label": "Date of Birth of Nominee"
+  },
+  {
+   "fieldname": "relationshio_with_depositor",
+   "fieldtype": "Data",
+   "label": "Relationship with Depositor"
+  },
+  {
+   "fieldname": "column_break_pjgj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_msxx",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-27 20:57:36.621455",
+ "modified_by": "Administrator",
+ "module": "Hdfc",
+ "name": "Resident Account To NRO Account Conversion Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
