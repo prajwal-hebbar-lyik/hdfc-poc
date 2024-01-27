@@ -1,290 +1,322 @@
 {
- "actions": [],
- "allow_rename": 1,
- "creation": "2024-01-27 00:08:21.480420",
- "doctype": "DocType",
- "engine": "InnoDB",
- "field_order": [
-  "requesters_details_as_per_bank_records_section",
-  "customer_id",
-  "column_break_geud",
-  "account_no",
-  "statement_section",
-  "statement_from",
-  "reason_for_request",
-  "column_break_sxwl",
-  "statement_to",
-  "interest_certificate_section",
-  "int_cert_from",
-  "column_break_vwtu",
-  "int_cert_to",
-  "balance_confirmation_section",
-  "balance_confirmation",
-  "fd_balances_section",
-  "fd_balances",
-  "fd_confirmation_section",
-  "fd_no",
-  "form_16a_section",
-  "form16a_year",
-  "status_of_cheque_section",
-  "cheque_no",
-  "dispatch_information_section",
-  "dispatch_mode",
-  "other_person_mobile_number",
-  "column_break_izxi",
-  "mailing_address",
-  "issue_passbook_section",
-  "passbook_consent",
-  "premature_liquidation_section",
-  "deposit_number",
-  "means_to_credit",
-  "column_break_mlbd",
-  "deposit_owner",
-  "signing_tab",
-  "digital_signing_section",
-  "aadhaar_uid",
-  "column_break_atqr",
-  "aadhaar_fullname"
- ],
- "fields": [
-  {
-   "fieldname": "requesters_details_as_per_bank_records_section",
-   "fieldtype": "Section Break",
-   "label": "Requester's Details (as per bank records)"
-  },
-  {
-   "fieldname": "customer_id",
-   "fieldtype": "Data",
-   "label": "Customer ID"
-  },
-  {
-   "fieldname": "statement_from",
-   "fieldtype": "Date",
-   "label": "Statement Period From:"
-  },
-  {
-   "fieldname": "statement_to",
-   "fieldtype": "Date",
-   "label": "Statement Period To:"
-  },
-  {
-   "fieldname": "column_break_sxwl",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "reason_for_request",
-   "fieldtype": "Data",
-   "label": "Reason for request"
-  },
-  {
-   "fieldname": "int_cert_from",
-   "fieldtype": "Date",
-   "label": "Year From:"
-  },
-  {
-   "fieldname": "int_cert_to",
-   "fieldtype": "Date",
-   "label": "Year To:"
-  },
-  {
-   "fieldname": "balance_confirmation",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Request Account Balance",
-   "options": "Yes\nNo"
-  },
-  {
-   "fieldname": "fd_balances",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Request FD Balance(s)",
-   "options": "Yes\nNo"
-  },
-  {
-   "description": "Provide the FD confirmation for FD number mentioned below. I have not received this by post till now.\n",
-   "fieldname": "fd_confirmation_section",
-   "fieldtype": "Section Break",
-   "label": "FD Confirmation"
-  },
-  {
-   "fieldname": "form16a_year",
-   "fieldtype": "Date",
-   "label": "Year"
-  },
-  {
-   "fieldname": "fd_no",
-   "fieldtype": "Data",
-   "label": "FD Number"
-  },
-  {
-   "fieldname": "cheque_no",
-   "fieldtype": "Data",
-   "label": "Cheque No."
-  },
-  {
-   "description": "Please choose how the documents have to be dispatched. If the documents have to be sent by post, please confirm that the address is the correct one. If the address is different than the one mentioned below, please first change the address in the bank records. If you are opting for the the documents to be handed over to another person, please mention the mobile number of the person that is going to collect.\n",
-   "fieldname": "dispatch_information_section",
-   "fieldtype": "Section Break",
-   "label": "Dispatch Information"
-  },
-  {
-   "fieldname": "dispatch_mode",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Dispatch Mode",
-   "options": "Send to mailing address\nI'll collect from the branch\nHand it over to someone else"
-  },
-  {
-   "fieldname": "other_person_mobile_number",
-   "fieldtype": "Phone",
-   "label": "Mobile No."
-  },
-  {
-   "fieldname": "column_break_izxi",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "mailing_address",
-   "fieldtype": "Text",
-   "label": "Mailing Address"
-  },
-  {
-   "description": "I request statement for the period mentioned below. I have also mentioned the reason for this request.",
-   "fieldname": "statement_section",
-   "fieldtype": "Section Break",
-   "label": "Request for Statement"
-  },
-  {
-   "description": "Please provide Interest Certificate CASA/FD Account number given above for the years mentioned below.\n",
-   "fieldname": "interest_certificate_section",
-   "fieldtype": "Section Break",
-   "label": "Request for Interest Certificate"
-  },
-  {
-   "description": "Please send me a balance confirmation for the account number mentioned above.",
-   "fieldname": "balance_confirmation_section",
-   "fieldtype": "Section Break",
-   "label": "Request for Balance Confirmation"
-  },
-  {
-   "description": "Please provide me the current FD balance(s) booked under the customer id mentioned above.",
-   "fieldname": "fd_balances_section",
-   "fieldtype": "Section Break",
-   "label": "Request for FD Balance(s)"
-  },
-  {
-   "description": "Please send the Form16A in respect of Tax deducted under my customer id for the financial year mentioned below.",
-   "fieldname": "form_16a_section",
-   "fieldtype": "Section Break",
-   "label": "Request for Form 16A"
-  },
-  {
-   "description": "Please provide status of the\nCheque Number below",
-   "fieldname": "status_of_cheque_section",
-   "fieldtype": "Section Break",
-   "label": "Request for Status of Cheque"
-  },
-  {
-   "fieldname": "account_no",
-   "fieldtype": "Data",
-   "label": "Account No."
-  },
-  {
-   "fieldname": "column_break_vwtu",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "issue_passbook_section",
-   "fieldtype": "Section Break",
-   "label": "Issue Passbook"
-  },
-  {
-   "description": "I/we, request you to issue a Passbook (First time/ Duplicate) for Savings A/c No mentioned in this form. I/We understand that the facility of getting statement has been discontinued for passbook registered customer. \nI/we have read and agree to be bound by the terms and conditions of the savings account.\nI understand that there is a charge applicable for duplicate pass book issuance which would be debited to the Account number mentioned in this form.",
-   "fieldname": "passbook_consent",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Consent",
-   "options": "Yes\nNo"
-  },
-  {
-   "description": "We request you to kindly close the deposit account mentioned below, held in my/ our name with your bank. Also request you to credit the proceeds as per my choice below.\nWe understand that as per the bank's process the customers need to surrender the original renewed deposit ad- vice. However, we are in immediate need of the funds and hence request you to process the request for closure of the captioned account pending receipt of the renewed deposit advice. I/we hereby agree and undertake that on receipt of the renewed advice already dispatched to me/us, I/we shall destroy the same at our end. This letter of request for liquidation of the above referred deposit would discharge the bank of the liability on the said fixed deposits towards me/us and I / we will have no right of any claims on the bank on the said fixed deposit.",
-   "fieldname": "premature_liquidation_section",
-   "fieldtype": "Section Break",
-   "label": "Premature Liquidation"
-  },
-  {
-   "fieldname": "deposit_number",
-   "fieldtype": "Data",
-   "label": "Deposit No."
-  },
-  {
-   "fieldname": "column_break_mlbd",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "deposit_owner",
-   "fieldtype": "Data",
-   "label": "Deposit in the name of"
-  },
-  {
-   "fieldname": "means_to_credit",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Means to credit",
-   "options": "My/Own Account\nIssue Manager's Cheque"
-  },
-  {
-   "fieldname": "signing_tab",
-   "fieldtype": "Tab Break",
-   "label": "Signing"
-  },
-  {
-   "description": "I agree to the charges applicable for my above request to be debited to my account as mentioned in this form.",
-   "fieldname": "digital_signing_section",
-   "fieldtype": "Section Break",
-   "label": "Digital Signing"
-  },
-  {
-   "fieldname": "aadhaar_uid",
-   "fieldtype": "Data",
-   "label": "Aadhaar UID"
-  },
-  {
-   "fieldname": "column_break_atqr",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "aadhaar_fullname",
-   "fieldtype": "Data",
-   "label": "Name on Aadhaar"
-  },
-  {
-   "fieldname": "column_break_geud",
-   "fieldtype": "Column Break"
-  }
- ],
- "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2024-01-27 10:13:06.118426",
- "modified_by": "Administrator",
- "module": "Hdfc",
- "name": "Common Instruction Form",
- "owner": "Administrator",
- "permissions": [
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "System Manager",
-   "share": 1,
-   "write": 1
-  }
- ],
- "sort_field": "modified",
- "sort_order": "DESC",
- "states": []
+  "actions": [],
+  "allow_rename": 1,
+  "creation": "2024-01-27 00:08:21.480420",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "requesters_details_as_per_bank_records_section",
+    "customer_id",
+    "column_break_geud",
+    "account_no",
+    "statement_section",
+    "statement_from",
+    "reason_for_request",
+    "column_break_sxwl",
+    "statement_to",
+    "interest_certificate_section",
+    "int_cert_from",
+    "column_break_vwtu",
+    "int_cert_to",
+    "balance_confirmation_section",
+    "balance_confirmation",
+    "fd_balances_section",
+    "fd_balances",
+    "fd_confirmation_section",
+    "fd_no",
+    "form_16a_section",
+    "form16a_year",
+    "status_of_cheque_section",
+    "cheque_no",
+    "dispatch_information_section",
+    "dispatch_mode",
+    "other_person_mobile_number",
+    "column_break_izxi",
+    "mailing_address",
+    "issue_passbook_section",
+    "passbook_consent",
+    "premature_liquidation_section",
+    "deposit_number",
+    "means_to_credit",
+    "column_break_mlbd",
+    "deposit_owner",
+    "signing_tab",
+    "digital_signing_section",
+    "aadhaar_uid",
+    "column_break_atqr",
+    "aadhaar_fullname",
+    "digital_signature_tab",
+    "digital_signature_type",
+    "digital_signature_id",
+    "submitter_phone",
+    "submission_time"
+  ],
+  "fields": [
+    {
+      "fieldname": "requesters_details_as_per_bank_records_section",
+      "fieldtype": "Section Break",
+      "label": "Requester's Details (as per bank records)"
+    },
+    {
+      "fieldname": "customer_id",
+      "fieldtype": "Data",
+      "label": "Customer ID"
+    },
+    {
+      "fieldname": "statement_from",
+      "fieldtype": "Date",
+      "label": "Statement Period From:"
+    },
+    {
+      "fieldname": "statement_to",
+      "fieldtype": "Date",
+      "label": "Statement Period To:"
+    },
+    {
+      "fieldname": "column_break_sxwl",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "reason_for_request",
+      "fieldtype": "Data",
+      "label": "Reason for request"
+    },
+    {
+      "fieldname": "int_cert_from",
+      "fieldtype": "Date",
+      "label": "Year From:"
+    },
+    {
+      "fieldname": "int_cert_to",
+      "fieldtype": "Date",
+      "label": "Year To:"
+    },
+    {
+      "fieldname": "balance_confirmation",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Request Account Balance",
+      "options": "Yes\nNo"
+    },
+    {
+      "fieldname": "fd_balances",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Request FD Balance(s)",
+      "options": "Yes\nNo"
+    },
+    {
+      "description": "Provide the FD confirmation for FD number mentioned below. I have not received this by post till now.\n",
+      "fieldname": "fd_confirmation_section",
+      "fieldtype": "Section Break",
+      "label": "FD Confirmation"
+    },
+    {
+      "fieldname": "form16a_year",
+      "fieldtype": "Date",
+      "label": "Year"
+    },
+    {
+      "fieldname": "fd_no",
+      "fieldtype": "Data",
+      "label": "FD Number"
+    },
+    {
+      "fieldname": "cheque_no",
+      "fieldtype": "Data",
+      "label": "Cheque No."
+    },
+    {
+      "description": "Please choose how the documents have to be dispatched. If the documents have to be sent by post, please confirm that the address is the correct one. If the address is different than the one mentioned below, please first change the address in the bank records. If you are opting for the the documents to be handed over to another person, please mention the mobile number of the person that is going to collect.\n",
+      "fieldname": "dispatch_information_section",
+      "fieldtype": "Section Break",
+      "label": "Dispatch Information"
+    },
+    {
+      "fieldname": "dispatch_mode",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Dispatch Mode",
+      "options": "Send to mailing address\nI'll collect from the branch\nHand it over to someone else"
+    },
+    {
+      "fieldname": "other_person_mobile_number",
+      "fieldtype": "Phone",
+      "label": "Mobile No."
+    },
+    {
+      "fieldname": "column_break_izxi",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "mailing_address",
+      "fieldtype": "Text",
+      "label": "Mailing Address"
+    },
+    {
+      "description": "I request statement for the period mentioned below. I have also mentioned the reason for this request.",
+      "fieldname": "statement_section",
+      "fieldtype": "Section Break",
+      "label": "Request for Statement"
+    },
+    {
+      "description": "Please provide Interest Certificate CASA/FD Account number given above for the years mentioned below.\n",
+      "fieldname": "interest_certificate_section",
+      "fieldtype": "Section Break",
+      "label": "Request for Interest Certificate"
+    },
+    {
+      "description": "Please send me a balance confirmation for the account number mentioned above.",
+      "fieldname": "balance_confirmation_section",
+      "fieldtype": "Section Break",
+      "label": "Request for Balance Confirmation"
+    },
+    {
+      "description": "Please provide me the current FD balance(s) booked under the customer id mentioned above.",
+      "fieldname": "fd_balances_section",
+      "fieldtype": "Section Break",
+      "label": "Request for FD Balance(s)"
+    },
+    {
+      "description": "Please send the Form16A in respect of Tax deducted under my customer id for the financial year mentioned below.",
+      "fieldname": "form_16a_section",
+      "fieldtype": "Section Break",
+      "label": "Request for Form 16A"
+    },
+    {
+      "description": "Please provide status of the\nCheque Number below",
+      "fieldname": "status_of_cheque_section",
+      "fieldtype": "Section Break",
+      "label": "Request for Status of Cheque"
+    },
+    {
+      "fieldname": "account_no",
+      "fieldtype": "Data",
+      "label": "Account No."
+    },
+    {
+      "fieldname": "column_break_vwtu",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "issue_passbook_section",
+      "fieldtype": "Section Break",
+      "label": "Issue Passbook"
+    },
+    {
+      "description": "I/we, request you to issue a Passbook (First time/ Duplicate) for Savings A/c No mentioned in this form. I/We understand that the facility of getting statement has been discontinued for passbook registered customer. \nI/we have read and agree to be bound by the terms and conditions of the savings account.\nI understand that there is a charge applicable for duplicate pass book issuance which would be debited to the Account number mentioned in this form.",
+      "fieldname": "passbook_consent",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Consent",
+      "options": "Yes\nNo"
+    },
+    {
+      "description": "We request you to kindly close the deposit account mentioned below, held in my/ our name with your bank. Also request you to credit the proceeds as per my choice below.\nWe understand that as per the bank's process the customers need to surrender the original renewed deposit ad- vice. However, we are in immediate need of the funds and hence request you to process the request for closure of the captioned account pending receipt of the renewed deposit advice. I/we hereby agree and undertake that on receipt of the renewed advice already dispatched to me/us, I/we shall destroy the same at our end. This letter of request for liquidation of the above referred deposit would discharge the bank of the liability on the said fixed deposits towards me/us and I / we will have no right of any claims on the bank on the said fixed deposit.",
+      "fieldname": "premature_liquidation_section",
+      "fieldtype": "Section Break",
+      "label": "Premature Liquidation"
+    },
+    {
+      "fieldname": "deposit_number",
+      "fieldtype": "Data",
+      "label": "Deposit No."
+    },
+    {
+      "fieldname": "column_break_mlbd",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "deposit_owner",
+      "fieldtype": "Data",
+      "label": "Deposit in the name of"
+    },
+    {
+      "fieldname": "means_to_credit",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Means to credit",
+      "options": "My/Own Account\nIssue Manager's Cheque"
+    },
+    {
+      "fieldname": "signing_tab",
+      "fieldtype": "Tab Break",
+      "label": "Signing"
+    },
+    {
+      "description": "I agree to the charges applicable for my above request to be debited to my account as mentioned in this form.",
+      "fieldname": "digital_signing_section",
+      "fieldtype": "Section Break",
+      "label": "Digital Signing"
+    },
+    {
+      "fieldname": "aadhaar_uid",
+      "fieldtype": "Data",
+      "label": "Aadhaar UID"
+    },
+    {
+      "fieldname": "column_break_atqr",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "aadhaar_fullname",
+      "fieldtype": "Data",
+      "label": "Name on Aadhaar"
+    },
+    {
+      "fieldname": "column_break_geud",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "digital_signature_tab",
+      "fieldtype": "Tab Break",
+      "label": "Digital Signature & Submission Details"
+    },
+    {
+      "fieldname": "digital_signature_type",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Type of Digital Signature",
+      "options": "Email\nMobile\nAadhaar"
+    },
+    {
+      "fieldname": "digital_signature_id",
+      "fieldtype": "Data",
+      "label": "ID of Digital Signature"
+    },
+    {
+      "fieldname": "submitter_phone",
+      "fieldtype": "Phone",
+      "label": "Submitter Mobile Number"
+    },
+    {
+      "fieldname": "submission_time",
+      "fieldtype": "Data",
+      "label": "Submission Time"
+    }
+  ],
+  "index_web_pages_for_search": 1,
+  "links": [],
+  "modified": "2024-01-27 10:13:06.118426",
+  "modified_by": "Administrator",
+  "module": "Hdfc",
+  "name": "Common Instruction Form",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": []
 }
