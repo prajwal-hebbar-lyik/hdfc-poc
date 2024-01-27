@@ -7,6 +7,7 @@
  "field_order": [
   "requesters_details_as_per_bank_records_section",
   "customer_id",
+  "column_break_geud",
   "account_no",
   "statement_section",
   "statement_from",
@@ -38,7 +39,12 @@
   "deposit_number",
   "means_to_credit",
   "column_break_mlbd",
-  "deposit_owner"
+  "deposit_owner",
+  "signing_tab",
+  "digital_signing_section",
+  "aadhaar_uid",
+  "column_break_atqr",
+  "aadhaar_fullname"
  ],
  "fields": [
   {
@@ -226,11 +232,40 @@
    "in_list_view": 1,
    "label": "Means to credit",
    "options": "My/Own Account\nIssue Manager's Cheque"
+  },
+  {
+   "fieldname": "signing_tab",
+   "fieldtype": "Tab Break",
+   "label": "Signing"
+  },
+  {
+   "description": "I agree to the charges applicable for my above request to be debited to my account as mentioned in this form.",
+   "fieldname": "digital_signing_section",
+   "fieldtype": "Section Break",
+   "label": "Digital Signing"
+  },
+  {
+   "fieldname": "aadhaar_uid",
+   "fieldtype": "Data",
+   "label": "Aadhaar UID"
+  },
+  {
+   "fieldname": "column_break_atqr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "aadhaar_fullname",
+   "fieldtype": "Data",
+   "label": "Name on Aadhaar"
+  },
+  {
+   "fieldname": "column_break_geud",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-27 10:01:23.418931",
+ "modified": "2024-01-27 10:13:06.118426",
  "modified_by": "Administrator",
  "module": "Hdfc",
  "name": "Common Instruction Form",
