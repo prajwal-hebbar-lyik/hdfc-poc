@@ -2,7 +2,6 @@ import json
 import base64
 import frappe
 from frappe import db as db
-
 from frappe.client import attach_file
 
 
@@ -23,6 +22,9 @@ def get_common_fields(lyikrec: dict) -> dict:
 
     if "receipt_url" in rec:
         doc_rec["receipt_url"] = rec["receipt_url"]
+
+    if "record_id" in rec:
+        doc_rec["lyik_id"] = rec["record_id"]
 
     if "mobile_otp" in rec and rec["mobile_otp"] != None:
         doc_rec["digital_signature_type"] = "Mobile"
@@ -170,23 +172,56 @@ def get_doctype_record(doctype: str, rec: dict) -> dict:
     return rec
 
 
+def add_attachment(key, doctype, file_name, file_data):
+    file = frappe.get_doc(
+        {
+            "doctype": "File",
+            "file_name": file_name,
+            "attached_to_doctype": doctype,
+            "attached_to_name": key,
+            "attached_to_field": None,
+            "folder": None,
+            "is_private": None,
+            "content": file_data,
+            "decode": True,
+        }
+    )
+    file.save()
+
+
+def query_name_on_lyik_id(doctype, id) -> str:
+    # here name means the ID of the record within the DocType
+    recs = db.get_list(doctype, filters={"lyik_id": id}, pluck="name")
+    return recs[0]
+
+
 @frappe.whitelist()
 def lyik_insert_record(**kwargs):
     """
     This function expects the following keyword values
     record : contains a JSON document that contains all the fields that need to be inserted into the doctype
+    operation : contains the nature of operation. It can be 'INSERT' or 'UPDATE'
     doctype : The name of the doctype. Example: 'Common Instruction Form'
     <filename> : base64 encoded bytes of the file. All the other arguments are assumed to be files that will be attached to the document
     """
+    is_insert = kwargs["operation"] == "INSERT"
+    is_update = kwargs["operation"] == "UPDATE"
+
+    print(f'Operation is {kwargs["operation"]}')
     doctype = kwargs["doctype"]
 
-    record = get_doctype_record(doctype, json.loads(kwargs["record"]))
-    record["doctype"] = doctype
+    if is_insert:
+        record = get_doctype_record(doctype, json.loads(kwargs["record"]))
+        record["doctype"] = doctype
+        cif = frappe.get_doc(record)
+        newrec = cif.insert(ignore_permissions=True)
+        # Now store the primary key
+        pkey = newrec.name
 
-    cif = frappe.get_doc(record)
-    newrec = cif.insert(ignore_permissions=True)
-    # Now store the primary key
-    pkey = newrec.name
+    if is_update:
+        lyik_id = kwargs["record_id"]
+        pkey = query_name_on_lyik_id(doctype, lyik_id)
+        print(f"Lyik ID -> {lyik_id}. DocType name -> {pkey}")
 
     # Parse through the input to insert files if any
     for k in kwargs:
@@ -194,19 +229,6 @@ def lyik_insert_record(**kwargs):
         print(f"Trying to insert {k}")
         if is_base64(v):
             print(f"{k} is detected as a file")
-            file = frappe.get_doc(
-                {
-                    "doctype": "File",
-                    "file_name": k,
-                    "attached_to_doctype": record["doctype"],
-                    "attached_to_name": pkey,
-                    "attached_to_field": None,
-                    "folder": None,
-                    "is_private": None,
-                    "content": v,
-                    "decode": True,
-                }
-            )
-            file.save()
+            add_attachment(key=pkey, doctype=doctype, file_name=k, file_data=v)
 
     return f"Successfully added a new document with the ID {pkey}"
