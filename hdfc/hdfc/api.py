@@ -178,7 +178,9 @@ def lyik_insert_record(**kwargs):
     # Parse through the input to insert files if any
     for k in kwargs:
         v = kwargs[k]
+        print(f'Trying to insert {k}')
         if is_base64(v):
+            print(f'{k} is detected as a file')
             file = frappe.get_doc(
                 {
                     "doctype": "File",
