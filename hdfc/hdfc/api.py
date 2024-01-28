@@ -21,8 +21,8 @@ def get_common_fields(lyikrec: dict) -> dict:
     doc_rec["submitter_phone"] = rec["_submitter_phone"]
     doc_rec["submission_time"] = rec["submission_time"]
 
-    if 'receipt_url' in rec:
-        doc_rec['receipt_url'] = rec['receipt_url']
+    if "receipt_url" in rec:
+        doc_rec["receipt_url"] = rec["receipt_url"]
 
     if "mobile_otp" in rec and rec["mobile_otp"] != None:
         doc_rec["digital_signature_type"] = "Mobile"
@@ -99,9 +99,9 @@ def translate_to_common_instruction_form(rec: dict) -> dict:
         "deposit_number": "deposit_number",
         "means_to_credit": "means_to_credit",
         "deposit_owner": "deposit_owner",
-        "balance_confirmation":"balance_confirmation",
-        "fd_balances":"fd_balances",
-        "passbook_consent":"passbook_consent"
+        "balance_confirmation": "balance_confirmation",
+        "fd_balances": "fd_balances",
+        "passbook_consent": "passbook_consent",
     }
 
     doc_rec = {}
@@ -137,11 +137,21 @@ def translate_to_name_consent_form(rec: dict) -> dict:
         if lyik_f in rec:
             doc_rec[doc_f] = rec[lyik_f]
 
-    doc_rec["is_non_profit"] = 1 if rec["is_non_profit"] == "Yes" else 0
-    doc_rec["import"] = 1 if "import" in rec["import_export"] else 0
-    doc_rec["export"] = 1 if "export" in rec["import_export"] else 0
-    doc_rec["owned"] = 1 if "owned" in rec["address_type"] else 0
-    doc_rec["rented_leased"] = 1 if "rented_leased" in rec["address_type"] else 0
+    doc_rec["is_non_profit"] = (
+        1 if ("is_non_profit" in rec and rec["is_non_profit"] == "Yes") else 0
+    )
+    doc_rec["import"] = (
+        1 if ("import_export" in rec and "import" in rec["import_export"]) else 0
+    )
+    doc_rec["export"] = (
+        1 if ("import_export" in rec and "export" in rec["import_export"]) else 0
+    )
+    doc_rec["owned"] = (
+        1 if ("address_type" in rec and "owned" in rec["address_type"]) else 0
+    )
+    doc_rec["rented_leased"] = (
+        1 if ("address_type" in rec and "rented_leased" in rec["address_type"]) else 0
+    )
 
     doc_rec.update(get_common_fields(rec))
 
@@ -181,9 +191,9 @@ def lyik_insert_record(**kwargs):
     # Parse through the input to insert files if any
     for k in kwargs:
         v = kwargs[k]
-        print(f'Trying to insert {k}')
+        print(f"Trying to insert {k}")
         if is_base64(v):
-            print(f'{k} is detected as a file')
+            print(f"{k} is detected as a file")
             file = frappe.get_doc(
                 {
                     "doctype": "File",
