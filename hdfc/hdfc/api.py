@@ -10,7 +10,6 @@ def is_base64(s: str) -> bool:
         s_bytes = bytes(s, "ascii")
         return base64.b64encode(base64.b64decode(s_bytes)) == s_bytes
     except Exception as ex:
-        print(ex)
         return False
 
 
@@ -200,6 +199,7 @@ def lyik_insert_record(**kwargs):
     """
     This function expects the following keyword values
     record : contains a JSON document that contains all the fields that need to be inserted into the doctype
+    record_id : contains the LYIK ID that needs to be updated
     operation : contains the nature of operation. It can be 'INSERT' or 'UPDATE'
     doctype : The name of the doctype. Example: 'Common Instruction Form'
     <filename> : base64 encoded bytes of the file. All the other arguments are assumed to be files that will be attached to the document
@@ -221,14 +221,11 @@ def lyik_insert_record(**kwargs):
     if is_update:
         lyik_id = kwargs["record_id"]
         pkey = query_name_on_lyik_id(doctype, lyik_id)
-        print(f"Lyik ID -> {lyik_id}. DocType name -> {pkey}")
 
     # Parse through the input to insert files if any
     for k in kwargs:
         v = kwargs[k]
-        print(f"Trying to insert {k}")
         if is_base64(v):
-            print(f"{k} is detected as a file")
             add_attachment(key=pkey, doctype=doctype, file_name=k, file_data=v)
 
     return f"Successfully added a new document with the ID {pkey}"
