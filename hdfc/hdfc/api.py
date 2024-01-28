@@ -21,6 +21,9 @@ def get_common_fields(lyikrec: dict) -> dict:
     doc_rec["submitter_phone"] = rec["_submitter_phone"]
     doc_rec["submission_time"] = rec["submission_time"]
 
+    if 'receipt_url' in rec:
+        doc_rec['receipt_url'] = rec['receipt_url']
+
     if "mobile_otp" in rec and rec["mobile_otp"] != None:
         doc_rec["digital_signature_type"] = "Mobile"
         doc_rec["digital_signature_id"] = rec["mobile_otp"]
