@@ -1,0 +1,30 @@
+{
+    "employee": {
+      "id": 101,
+      "name": "John Doe",
+      "position": "Software Developer",
+      "skills": ["Python", "JavaScript", "SQL"],
+      "contact": {
+        "email": "john.doe@example.com",
+        "phone": "+1 123-456-7890"
+      },
+      "projects": [
+        {
+          "project_name": "Web Application",
+          "start_date": "2022-01-01",
+          "end_date": "2022-06-30"
+        },
+        {
+          "project_name": "Database Optimization",
+          "start_date": "2022-07-01",
+          "end_date": "2022-12-31"
+        }
+      ]
+    },
+    "company": {
+      "name": "Tech Solutions Inc.",
+      "location": "Cityville",
+      "industry": "Information Technology"
+    }
+  }
+  
