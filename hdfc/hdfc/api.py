@@ -96,6 +96,9 @@ def translate_to_common_instruction_form(rec: dict) -> dict:
         "deposit_number": "deposit_number",
         "means_to_credit": "means_to_credit",
         "deposit_owner": "deposit_owner",
+        "balance_confirmation":"balance_confirmation",
+        "fd_balances":"fd_balances",
+        "passbook_consent":"passbook_consent"
     }
 
     doc_rec = {}
@@ -103,10 +106,6 @@ def translate_to_common_instruction_form(rec: dict) -> dict:
         lyik_f = field_mapping[doc_f]
         if lyik_f in rec:
             doc_rec[doc_f] = rec[lyik_f]
-
-    doc_rec["balance_confirmation"] = 1 if rec["balance_confirmation"] == "Yes" else 0
-    doc_rec["fd_balances"] = 1 if rec["fd_balances"] == "Yes" else 0
-    doc_rec["passbook_consent"] = 1 if rec["passbook_consent"] == "Yes" else 0
 
     doc_rec.update(get_common_fields(rec))
 
