@@ -306,6 +306,7 @@
   {
    "fieldname": "lyik_id",
    "fieldtype": "Data",
+   "hidden": 1,
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "LYIK ID",
@@ -314,7 +315,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-28 16:45:15.765567",
+ "modified": "2024-01-28 17:13:06.527976",
  "modified_by": "Administrator",
  "module": "Hdfc",
  "name": "Common Instruction Form",
