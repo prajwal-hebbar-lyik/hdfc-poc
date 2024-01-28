@@ -8,11 +8,13 @@
   "customer_information_section",
   "customer_id",
   "customer_name",
+  "lyik_id",
   "name_change_section",
   "reason_for_change",
   "new_name",
   "short_name",
   "section_break_lnis",
+  "receipt_url",
   "submitter_phone",
   "submission_time",
   "customer_profile_tab",
@@ -89,7 +91,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Nature of Business",
-   "options": "Manufacturing\nService Provider\nStock Brokers\nReal Estate\nRetail Trader\nWholesale Trading\nOthers"
+   "options": "manufacturing\nservice_provider\nstock_brokers\nreal_estate\nretail_trader\nwholesale_trading\nothers"
   },
   {
    "fieldname": "details_of_activity",
@@ -160,7 +162,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Nature of Industry",
-   "options": "Automobile\nPetrol Pump\nContractor\nOil\nConsultancy\nEducation\nNBFC\nRetail Jewellery\nFurniture/Timber\nBroking\nAdvt.Agencies\nRestaurants\nForex Dealer/Bullion\nChit Funds\nFisheries/Poultry\nCements/Paints\nFMCG\nHospital/Nursing Home/Clinics\nTravel/Tour Agency\nConstruction\nShroff\nOthers"
+   "options": "automobile\npetrol_pump\ncontractor\noil\nconsultancy\neducation\nnbfc\nretail_jewellery\nfurniture_timber\nbroking\nadvt_agencies\nrestaurants\nforex\nchit_funds\nfisheries_poultry\ncements_paints\nfmcg\nhospitals\ntravel\nconstruction\nshroff\nothers"
   },
   {
    "description": "This section is applicable for Individuals ONLY\n\nIMPORTANT\n\nFollowing are the terms for change request:\nThe fresh / new Signature(s) and / or Operating Instructions would be valid once the changes are updated in the system. The Bank will not be responsible for return/dishonour of any such old outstanding / unpaid cheques / debits / requests and which are still in transit and yet to be received / actioned by the Bank and not in the confirmity with the fresh / new Signature(s) and / or Operating Instructions Change request.\nIn case, where the Operating Instructions have been changed from Singly or Either or Survivor to Joint Opetations, the ATM/Debit cards would be hotlisted / discontinued automatically.\nBy digitally signing this document, I agree to these terms",
@@ -233,11 +235,24 @@
    "fieldname": "digital_signature_id",
    "fieldtype": "Data",
    "label": "ID of Digital Signature"
+  },
+  {
+   "fieldname": "receipt_url",
+   "fieldtype": "Data",
+   "label": "Download Link",
+   "options": "URL"
+  },
+  {
+   "fieldname": "lyik_id",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "LYIK ID",
+   "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-27 23:28:04.357857",
+ "modified": "2024-01-28 16:14:46.710322",
  "modified_by": "Administrator",
  "module": "Hdfc",
  "name": "Name Change Form",

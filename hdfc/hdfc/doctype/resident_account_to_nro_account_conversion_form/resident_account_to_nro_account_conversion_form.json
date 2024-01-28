@@ -10,6 +10,8 @@
   "face_to_face",
   "column_break_msxx",
   "non_face_to_face",
+  "section_break_zctk",
+  "lyik_id",
   "operating_instruction_section",
   "mode_of_operation_nro",
   "pep_declaration_section",
@@ -995,11 +997,24 @@
   {
    "fieldname": "column_break_msxx",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_zctk",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "LYIK ID"
+  },
+  {
+   "fieldname": "lyik_id",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "LYIK ID",
+   "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-27 20:57:36.621455",
+ "modified": "2024-01-28 14:47:16.424327",
  "modified_by": "Administrator",
  "module": "Hdfc",
  "name": "Resident Account To NRO Account Conversion Form",
