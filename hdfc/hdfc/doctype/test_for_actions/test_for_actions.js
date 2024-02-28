@@ -23,6 +23,7 @@ frappe.ui.form.on('Test For Actions', {
         function() {
           const value = frm.doc.name
           frappe.db.set_value('Test For Actions', value, {'status': 'Approved'});
+          frappe.db.set_value('Test For Actions', value, {'reason': ""});
           frappe.msgprint(`Record ${value} has been Approved`);
         },
         function() {
@@ -55,6 +56,7 @@ frappe.ui.form.on('Test For Actions', {
             }
         });
         
+        d.$wrapper.find('.modal-dialog').css("max-width", "60%");
         d.show();
           // frappe.msgprint(`Record ${value} has been rejected`);
         },
