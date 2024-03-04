@@ -1,13 +1,12 @@
 // Copyright (c) 2024, LYIK Technologies and contributors
 // For license information, please see license.txt
 
-// frappe.ui.form.on("Test For Actions", {
+// frappe.ui.form.on("Cards Item Workspace", {
 // 	refresh(frm) {
 
 // 	},
 // });
-
-frappe.ui.form.on('Test For Actions', {
+frappe.ui.form.on('Cards Item Workspace', {
   refresh: function(frm) {
     let button;
     if(frm.doc.status == "Approved") {
@@ -22,8 +21,8 @@ frappe.ui.form.on('Test For Actions', {
         'Are you sure to Approve?',
         function() {
           const value = frm.doc.name
-          frappe.db.set_value('Test For Actions', value, {'status': 'Approved', 'reason': ""});
-          // frappe.db.set_value('Test For Actions', value, {'reason': ""});
+          frappe.db.set_value('Cards Item Workspace', value, {'status': 'Approved', 'reason': ""});
+          // frappe.db.set_value('Cards Item Workspace', value, {'reason': ""});
           frappe.msgprint(`Record ${value} has been Approved`);
         },
         function() {
@@ -37,7 +36,7 @@ frappe.ui.form.on('Test For Actions', {
         'Are you sure to Reject?',
         function() {
           const value = frm.doc.name
-          frappe.db.set_value('Test For Actions', value, {'status': 'Rejected'});
+          frappe.db.set_value('Cards Item Workspace', value, {'status': 'Rejected'});
           let d = new frappe.ui.Dialog({
             title: 'Reasons for Rejecting the Form',
             fields: [
@@ -51,7 +50,7 @@ frappe.ui.form.on('Test For Actions', {
             primary_action_label: 'Submit',
             primary_action(values) {
                 const value = frm.doc.name
-                frappe.db.set_value('Test For Actions', value, {'reason': values.reason})
+                frappe.db.set_value('Cards Item Workspace', value, {'reason': values.reason})
                 d.hide();
             }
         });
