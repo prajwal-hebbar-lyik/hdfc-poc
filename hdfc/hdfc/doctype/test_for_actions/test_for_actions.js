@@ -9,6 +9,7 @@
 
 frappe.ui.form.on('Test For Actions', {
   refresh: function(frm) {
+    // frm.page.sidebar.remove();
     let button;
     if(frm.doc.status == "Approved") {
       button = "Approved";
